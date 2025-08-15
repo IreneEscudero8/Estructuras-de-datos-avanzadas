@@ -9,7 +9,7 @@ public class NodoDoble <T>{
     private NodoDoble<T> anterior;
 
     public NodoDoble(T dato) {
-        this.dato = dato;
+        this.dato  = dato;
         this.anterior = null;
         this.siguiente = null;
     }
@@ -46,3 +46,4 @@ public class NodoDoble <T>{
     
     
 }
+
