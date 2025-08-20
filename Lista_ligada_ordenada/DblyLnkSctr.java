@@ -4,8 +4,6 @@
  * Clase que define una lista doblemente ligada ordenada segun prioridad del paciente
  */
 
-import ADTsException.*;
-
 public class DblyLnkSctr {    
     private LnrDblNd<Patient> head,tail;
     private int count;
