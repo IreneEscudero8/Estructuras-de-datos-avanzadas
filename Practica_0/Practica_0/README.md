@@ -39,10 +39,10 @@ El objetivo es simular la llegada en tiempo real de 1000 pacientes y comparar lo
 ---
 #  Cómo ejecutar
 
-** 1. Compilar todos los archivos**
+ 1. **Compilar todos los archivos**
 javac *.java Arbol_binario/*.java Lista_ligada_ordenada/*.java
 
-** 2. Ejecutar el programa principal**
+ 2. **Ejecutar el programa principal**
 java TriageSystem
 
 
