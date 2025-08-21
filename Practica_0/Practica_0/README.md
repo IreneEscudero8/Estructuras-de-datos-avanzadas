@@ -1,4 +1,4 @@
-## 🏥 Proyecto Triage System
+# Proyecto Triage System
 ---
 **Equipo:**  
 - Luis Fernando Reyes  
@@ -18,7 +18,7 @@ El objetivo es simular la llegada en tiempo real de 1000 pacientes y comparar lo
 
 ---
 
-# Estructura del proyecto
+## Estructura del proyecto
 ```plaintext
 
 ├── Arbol_binario/
@@ -37,7 +37,7 @@ El objetivo es simular la llegada en tiempo real de 1000 pacientes y comparar lo
 ├── README.md                # Documentación del proyecto
 ```
 ---
-#  Cómo ejecutar
+##  Cómo ejecutar
 
  1. **Compilar todos los archivos**
 javac *.java Arbol_binario/*.java Lista_ligada_ordenada/*.java
@@ -48,7 +48,7 @@ java TriageSystem
 
 ---
 
-#  Conclusión
+##  Conclusión
 
 En conclusion a lista ordenada permite eliminar al paciente con mayor prioridad con mayor facilidad, pero sufre al insertar nuevos pacientes, ya que debe recorrer la lista para mantener el orden, resultando en un mayor tiempo de ejecucion. Por otro lado, el BST equilibra mejor las operaciones: tanto la inserción como la búsqueda y eliminación se realizan rapidamente. La comparación experimental entre ambas estructuras evidencia que la lista es más eficiente en escenarios con pocas inserciones y muchas eliminaciones, mientras que el árbol resulta más escalable y robusto cuando el volumen de pacientes aumenta. Esto demuestra la importancia de seleccionar la estructura de datos adecuada según las características del problema real.  
 
