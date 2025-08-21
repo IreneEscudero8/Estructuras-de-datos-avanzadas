@@ -1,9 +1,8 @@
-
-package practica0;
 /*
- * Nodo para Árbol Binario de Búsqueda (BST)
- * Guarda un Patient y referencias a hijos izquierdo y derecho.
- */
+ * PROYECTO ESTRUCTURA DE DATOS AVANZADAS
+ * Equipo: Luis Fernando Reyes, Andre Gorostieta, Irene Escudero
+ * Nodo para Árbol Binario de Búsqueda (BST), guarda un Patient y referencias a hijos izquierdo y derecho.
+*/
 public class TreeNode {
     private Patient patient;
     private TreeNode left;
@@ -44,3 +43,4 @@ public class TreeNode {
         return patient.toString();
     }
 }
+
