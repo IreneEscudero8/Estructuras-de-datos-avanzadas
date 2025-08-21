@@ -4,7 +4,7 @@
  * Equipo: Luis Fernando Reyes, Andre Gorostieta, Irene Escudero
  * Clase clase tipo main que verifica el buen funcionamiento del sistema en diversos casos de el Binary tree
 */
-public class Practica0 {
+public class Prueba_arbol {
 
     public static void main(String[] args) {
         // Crear el árbol de pacientes
