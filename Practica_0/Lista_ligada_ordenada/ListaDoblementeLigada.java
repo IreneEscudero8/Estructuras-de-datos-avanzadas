@@ -1,5 +1,5 @@
 /*
-PROYECTO ESTRUCTURA DE DATOS AVANZADAZ
+PROYECTO ESTRUCTURA DE DATOS AVANZADAS
 Equipo: Luis Fernando Reyes, Andre Gorostieta, Irene Escudero
 */
 package DblyLnkSctr;
