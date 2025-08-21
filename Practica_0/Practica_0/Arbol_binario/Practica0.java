@@ -1,10 +1,9 @@
 
-package practica0;
-
-/**
- *
- * @author LARIG
- */
+/*
+ * PROYECTO ESTRUCTURA DE DATOS AVANZADAS
+ * Equipo: Luis Fernando Reyes, Andre Gorostieta, Irene Escudero
+ * Clase clase tipo main que verifica el buen funcionamiento del sistema en diversos casos de el Binary tree
+*/
 public class Practica0 {
 
     public static void main(String[] args) {
@@ -48,3 +47,4 @@ public class Practica0 {
 }
 
     
+
