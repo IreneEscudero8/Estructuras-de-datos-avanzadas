@@ -1,5 +1,8 @@
-
-package practica0;
+/*
+ * PROYECTO ESTRUCTURA DE DATOS AVANZADAS
+ * Equipo: Luis Fernando Reyes, Andre Gorostieta, Irene Escudero
+ * Clase que define un binary tree ordenado segun prioridad del paciente 
+*/
 
 public class PatientBST {
     private TreeNode root;
@@ -95,4 +98,14 @@ public class PatientBST {
         while (n.getLeft() != null) n = n.getLeft();
         return n.getPatient();
     }
+
+    //Eliminar y obtener el paciente más urgente (mínima prioridad)
+    public Patient removeFirst() {
+    Patient min = getNextPatient();
+    if (min != null) {
+        root = deleteRec(root, min.getPriority());
+    }
+    return min;
+ }
 }
+
