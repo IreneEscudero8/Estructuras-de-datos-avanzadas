@@ -40,7 +40,6 @@ El objetivo es simular la llegada en tiempo real de 1000 pacientes y comparar lo
 ##  Cómo ejecutar
 
  1. **Compilar todos los archivos**
-javac *.java Arbol_binario/*.java Lista_ligada_ordenada/*.java
 
  2. **Ejecutar el programa principal**
 java TriageSystem
@@ -51,5 +50,6 @@ java TriageSystem
 ##  Conclusión
 
 En conclusion a lista ordenada permite eliminar al paciente con mayor prioridad con mayor facilidad, pero sufre al insertar nuevos pacientes, ya que debe recorrer la lista para mantener el orden, resultando en un mayor tiempo de ejecucion. Por otro lado, el BST equilibra mejor las operaciones: tanto la inserción como la búsqueda y eliminación se realizan rapidamente. La comparación experimental entre ambas estructuras evidencia que la lista es más eficiente en escenarios con pocas inserciones y muchas eliminaciones, mientras que el árbol resulta más escalable y robusto cuando el volumen de pacientes aumenta. Esto demuestra la importancia de seleccionar la estructura de datos adecuada según las características del problema real.  
+
 
 
