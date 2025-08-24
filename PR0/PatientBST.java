@@ -107,5 +107,12 @@ public class PatientBST {
     }
     return min;
  }
+
+    //Regreasar TRUE si la lista esta vacia, FALSE en caso contrario
+    public boolean isEmpty() {
+    return root == null;
+    }
+
 }
+
 
