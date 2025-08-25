@@ -5,7 +5,7 @@
 - Andre Gorostieta  
 - Irene Escudero
 
-  Tiempo de trabajo individual: 5-7 horas cada uno
+  Tiempo de trabajo individual: 5-7 horas cada uno  
   Tiempo de trabajo total: 15-21 horas
 
 Proyecto de la materia **Estructura de Datos Avanzadas**, que implementa un sistema de triage para pacientes, comparando el desempeño de dos estructuras de datos:  
@@ -72,6 +72,7 @@ Y por último, en la función delete se comportó mejor la estructura de lista e
 ##  Conclusion final
 
 En conclusion a lista ordenada permite eliminar al paciente con mayor prioridad con mayor facilidad, pero sufre al insertar nuevos pacientes, ya que debe recorrer la lista para mantener el orden, resultando en un mayor tiempo de ejecucion. Por otro lado, el BST equilibra mejor las operaciones: tanto la inserción como la búsqueda y eliminación se realizan rapidamente. La comparación experimental entre ambas estructuras evidencia que la lista es más eficiente en escenarios con pocas inserciones y muchas eliminaciones, mientras que el árbol resulta más escalable y robusto cuando el volumen de pacientes aumenta. Esto demuestra la importancia de seleccionar la estructura de datos adecuada según las características del problema real.  
+
 
 
 
