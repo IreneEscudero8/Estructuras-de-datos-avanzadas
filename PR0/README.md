@@ -45,6 +45,21 @@ El objetivo es simular la llegada en tiempo real de 1000 pacientes y comparar lo
  2. **Ejecutar el programa principal:**
 java TriageSystem
 
+Interpretación:
+En las siguientes gráficas comparamos el desempeño de las dos estructuras de datos escogidas para el proyecto (lista ligada ordenada y árbol binario). En las gráficas el eje de las X representa el número de pacientes y el eje de las Y representa el tiempo agregado.
+
+En primer lugar, observemos que en la gráfica se muestra el desempeño de las funciones insert, search y delete de la clase lista ligada ordenada. Podemos ver que la más tarda es la de insert, esto es porque cada vez hay más elementos y tiene que ingresarlos a corde su prioridad. 
+
+En la segunda gráfica podemos observar el desempeño de las mismas funciones pero en el árbol binario. El desempeño de las funciones fue bastante similar debido a cómo funciona el árbol binario.
+
+En desempeño en la función Insert podemos observar como al principio las dos estructuras van parejas en base al tiempo, pero después en la lista se va acumulando mucho el tiempo de insertar a comparación del árbol. El cual conviene más si la cantidad de datos es más grande.
+
+En la función Search la lista ordenada tardó más que el árbol binario pero la diferencia no fue tan marcada, ya que aquí no se le van aumentando poco a poco la cantidad de pacientes lo que hace más complicado el proceso de la lista ligada ordenada.
+
+Y por último, en la función delete se comportó mejor la estructura de lista enlazada que la de árbol binario, porque se le fueron reduciendo el número de pacientes en los cual andar moviéndose.
+
+En conclusión, el árbol binario funciona muy bien cuando son muchos datos, pero la lista ordenada funciona mejor cuando son no muchos datos.
+
 
 ---
 
