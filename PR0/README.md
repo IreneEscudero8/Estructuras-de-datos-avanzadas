@@ -1,9 +1,9 @@
 # Proyecto Triage System
 ---
 **Equipo:**  
-- Luis Fernando Reyes  
-- Andre Gorostieta  
-- Irene Escudero
+- Luis Fernando Reyes Altamirano 
+- Ricardo André Gorostieta Jurado 
+- Irene Escudero Cazarez
 
   Tiempo de trabajo individual: 5-7 horas cada uno  
   Tiempo de trabajo total: 15-21 horas
