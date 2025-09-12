@@ -30,3 +30,13 @@ El objetivo es leer un archivo con **n** pacientes (1 ≤ n ≤ 100,000), donde 
 │   └── ejemplo.txt             # Archivo de ejemplo con formato válido
 ├── README.md                   # Este documento
 └── Makefile                    # (Opcional) Atajos para compilar/ejecutar
+```
+---
+##  Cómo ejecutar
+
+ 1. **Compilar todos los archivos**
+
+ 2. **Ejecutar el programa principal:**
+java TriageSystem
+
+---
