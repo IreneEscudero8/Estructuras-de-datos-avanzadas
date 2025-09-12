@@ -8,10 +8,10 @@
   Tiempo de trabajo individual: 5-7 horas cada uno  
   Tiempo de trabajo total: 15-21 horas
 
-Proyecto de la materia **Estructura de Datos Avanzadas**, que implementa un sistema de triage para pacientes, comparando el desempeño de dos estructuras de datos:  
+Proyecto de la materia **Estructura de Datos Avanzadas**, que implementa un sistema de triage para pacientes, comparando el desempeño de la tabla hash vs un arreglo:  
 
--  **Lista doblemente ligada ordenada** 
--  **Árbol binario de búsqueda (BST)** 
+-  **Tabla Hash** 
+-  **Arreglo** 
 
 El objetivo es simular la llegada en tiempo real de 1000 pacientes cada minuto aleatoriamente y comparar los tiempos de ejecución en tres operaciones clave:
 
