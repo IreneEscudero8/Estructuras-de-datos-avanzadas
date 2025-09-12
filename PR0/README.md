@@ -25,17 +25,21 @@ El objetivo es simular la llegada en tiempo real de 1000 pacientes cada minuto a
 
 ## Estructura del proyecto
 ```plaintext
-├── src/
-│   ├── LeerPacientes.java      # Lector robusto del archivo (lee n y luego n líneas con 10 enteros)
-│   ├── Patient.java            # Tupla inmutable de 10 enteros (equals/hashCode)
-│   ├── LinearSolution.java     # Detección con arreglo lineal (O(n²) peor/promedio)
-│   ├── HashSolution.java       # Detección con tabla de hash (O(n) promedio)
-│   ├── MainCheck.java          # Programa principal que imprime la salida requerida
-│   └── Benchmark.java          # Comparador de tiempos y generación de CSV
-├── data/
-│   └── ejemplo.txt             # Archivo de ejemplo con formato válido
-├── README.md                   # Este documento
-└── Makefile                    # (Opcional) Atajos para compilar/ejecutar
+
+├── Arbol_binario/
+│   ├── PatientBST.java      # Implementación del árbol binario de búsqueda (BST) para manejar pacientes
+│   ├── TreeNode.java        # Clase que representa cada nodo del árbol (contiene a un paciente y referencias a hijos)
+│   ├── Practica0.java       # Programa de prueba principal para validar el árbol binario
+│
+├── Lista_ligada_ordenada/
+│   ├── DblyLnkSctr.java     # Implementación de la lista doblemente ligada ordenada (manejo de pacientes por prioridad)
+│   ├── LnrDblNd.java        # Clase nodo de la lista doblemente ligada (contiene a un paciente y punteros prev/next)
+│   ├── ADTsException.java   # Clase de excepción personalizada para manejar errores en operaciones de la lista
+│   ├── TestTriage.java      # Programa de prueba principal para validar la lista ligada
+│
+├── Patient.java             # Clase que modela a un paciente (nombre, ID, prioridad, etc.)
+├── TriageSystem.java        # Simulación principal: genera pacientes y compara rendimiento entre lista y BST
+├── README.md                # Documentación del proyecto
 ```
 ---
 ##  Cómo ejecutar
