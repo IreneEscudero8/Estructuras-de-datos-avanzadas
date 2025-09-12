@@ -22,6 +22,7 @@ El objetivo es simular la llegada en tiempo real de 1000 pacientes cada minuto a
 ---
 
 
+
 ## Estructura del proyecto
 ```plaintext
 
