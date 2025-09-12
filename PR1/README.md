@@ -50,7 +50,7 @@ En las siguientes gráficas comparamos el desempeño de las dos estructuras de d
 En primer lugar, observemos que en la gráfica se muestra el desempeño de las funciones insert, search y delete de la clase lista ligada ordenada. Podemos ver que la más tarda es la de insert, esto es porque cada vez hay más elementos y tiene que ingresarlos a corde su prioridad y recorre toda la lista hasta encontrar la prioridad correspondiente. 
 
 
-<img src="Hah.jpeg" alt="arbol_binario" width="400">  
+<img src="Hash.jpeg" alt="arbol_binario" width="400">  
 En la segunda gráfica podemos observar el desempeño de las mismas funciones pero en el árbol binario. El desempeño de las funciones fue bastante similar debido a cómo funciona el árbol binario.
 
 <img src="Comparacion.jpeg" alt="insert" width="400">  
