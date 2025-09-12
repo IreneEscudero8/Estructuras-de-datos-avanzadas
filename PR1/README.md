@@ -45,7 +45,7 @@ PR1/
  1. **Compilar todos los archivos**
 
  2. **Ejecutar el programa principal:**
-java TriageSystem
+java MainCompare, cambiando el "archivo.txt" por el archivo deseado
 
 ---
 
@@ -68,10 +68,7 @@ Como es notorio, apartir de mas de 20 datos el hash se vuelve mas eficiente a la
 
 ##  Conclusion final
 
-En conclusion a lista ordenada permite eliminar al paciente con mayor prioridad con mayor facilidad, pero sufre al insertar nuevos pacientes, ya que debe recorrer la lista para mantener el orden, resultando en un mayor tiempo de ejecucion. Por otro lado, el BST equilibra mejor las operaciones: tanto la inserción como la búsqueda y eliminación se realizan rapidamente. La comparación experimental entre ambas estructuras evidencia que la lista es más eficiente en escenarios con pocas inserciones y muchas eliminaciones, mientras que el árbol resulta más escalable y robusto cuando el volumen de pacientes aumenta. Esto demuestra la importancia de seleccionar la estructura de datos adecuada según las características del problema real.  
-
-
-
+La comparación directa revela el punto de inflexión: la tabla de hash supera en eficiencia a la lista lineal con tan solo unas pocas decenas de registros. Para conjuntos de datos grandes, la diferencia no es marginal, sino de varios órdenes de magnitud, haciendo de la tabla de hash la única opción viable para una aplicación real. En definitiva, este proyecto demuestra empíricamente que para problemas de búsqueda, inserción y detección de duplicados en grandes volúmenes de datos, la tabla de hash es una solución categóricamente superior a las búsquedas lineales. Su capacidad para distribuir y acceder a los datos de manera casi instantánea la convierte en una herramienta fundamental en el desarrollo de software eficiente y escalable.
 
 
 
