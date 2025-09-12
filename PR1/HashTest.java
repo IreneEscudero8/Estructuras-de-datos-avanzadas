@@ -6,14 +6,7 @@
 public class HashTest {
 
     public static void main(String[] args) {
-        // 1. Crear una instancia de la tabla hash de pacientes.
         PatientHashTable patientTable = new PatientHashTable();
-        System.out.println("Tabla de pacientes creada.\n");
-
-        // 2. Definir los resultados de los exámenes para varios pacientes.
-        // Pacientes 1 y 3 son idénticos.
-        // Pacientes 2 y 5 son idénticos.
-        // Paciente 6 tiene los mismos valores que el paciente 1, pero en orden diferente.
         int[] exams1 = {10, 85, 92, 45};
         int[] exams2 = {70, 65, 88, 91};
         int[] exams3 = {10, 85, 92, 45}; // Duplicado de exams1
@@ -22,8 +15,6 @@ public class HashTest {
         int[] exams6 = {45, 92, 85, 10}; // Mismos valores que exams1, pero en otro orden
         int[] exams7 = {120, 80, 75, 60};
 
-
-        // 3. Crear los objetos Patient.
         Patient paciente1 = new Patient(exams1);
         Patient paciente2 = new Patient(exams2);
         Patient paciente3 = new Patient(exams3);
@@ -34,8 +25,6 @@ public class HashTest {
         
         System.out.println("Añadiendo pacientes a la tabla...");
 
-        // 4. Añadir los pacientes a la tabla hash.
-        // El método addPatient se encargará de identificar duplicados.
         patientTable.addPatient(paciente1);
         patientTable.addPatient(paciente2);
         patientTable.addPatient(paciente3); // Este debería ser contado como idéntico.
@@ -46,12 +35,11 @@ public class HashTest {
         
         System.out.println("Proceso de añadir pacientes finalizado.\n");
 
-        // 5. Imprimir los resultados finales.
+
         System.out.println("------ Resultados del Analisis ------");
         System.out.println("Número de pacientes únicos registrados: " + patientTable.getUniquePatientCount());
         System.out.println("Número de registros identicos encontrados: " + patientTable.getIdenticalPatientsCount());
         
-        // Usamos el método printResults() para un mensaje más descriptivo.
         System.out.print("Conclusion: ");
         patientTable.printResults();
         System.out.println("------------------------------------");
