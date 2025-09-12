@@ -10,8 +10,9 @@ Tiempo de trabajo total: 15–21 horas
 
 Proyecto de la materia **Estructura de Datos Avanzadas**, que detecta si existen pacientes con **registros de laboratorio idénticos** (tuplas de 10 enteros) y **compara el desempeño** de dos enfoques de almacenamiento/búsqueda:
 
-- **Arreglo lineal (búsqueda secuencial)**->número de datos repetidos
-- **Tabla de hash** (encadenamiento o direccionamiento abierto)->número de repeticiones
+- **Arreglo lineal (búsqueda secuencial)**
+- **Tabla de hash** (encadenamiento o direccionamiento abierto)
+Nota: Arreglo lineal da el número de datos repetidos y la tabla de hash da el numero de parejas repetidas
 
 El objetivo es leer un archivo con **n** pacientes (1 ≤ n ≤ 100,000), donde cada línea posterior a la primera contiene **exactamente 10 enteros** (0 a 10,000,000) separados por espacio o tabulador, y producir una salida que indique si **no hay** pacientes con registros idénticos o si **se encontraron m pacientes idénticos**.
 
