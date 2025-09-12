@@ -47,13 +47,12 @@ java TriageSystem
 En las siguientes gráficas comparamos el desempeño de las dos estructuras de datos (La lista como manera de ordenamiento lineal y la tabla hash) Se realizaron usando la clase compare structure variando N, que es el total de pacientes, en grupos de 1,000 en 1,000. Tambien se forzo en esto a que hubiera 4 elemntos repetidos.
 
 <img src="Lista.jpeg" alt="Lista" width="400"> 
-<img src="Lista.jpeg" alt="Lista" width="400">  
 La lista mostro un desempeño exponencial en cuanto a tiempo, cada vez que se le agregan datos su tiempo de recorrido va aumentando ya que cada vez hay mas datos que recorder. Pero por otro lado contextos con bajos volumenes de datos son muy eficientes ya recorren rapido todos los datos.
 
 
 
 <img src="Hash.jpeg" alt="Lista" width="400"> 
-<img src="Hash.jpeg" alt="Lista" width="400"> 
+
 La tabla hash tiene un muy buen desempeño con grandes volumenes de datos, ya que su aumento es constante. Con pocos volumenes de datos sigue siendo eficiente, aunque hay mejores alternativas.
 
 
