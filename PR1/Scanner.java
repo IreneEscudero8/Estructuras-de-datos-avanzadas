@@ -13,11 +13,11 @@ import java.util.Scanner;
  *   double precio = ScannerUtil.readDouble("Precio: ");
  *   String nombre = ScannerUtil.readLine("Nombre: ");
  */
-public final class ScannerUtil {
+public final class Scanner {
     // Un único Scanner compartido. Locale.US usa punto decimal; cambia si prefieres coma.
     private static final Scanner SC = new Scanner(System.in).useLocale(Locale.US);
 
-    private ScannerUtil() { /* evitar instanciación */ }
+    private Scanner() { /* evitar instanciación */ }
 
     /** Lee una línea completa (incluye espacios). Nunca retorna null. */
     public static String readLine(String prompt) {
