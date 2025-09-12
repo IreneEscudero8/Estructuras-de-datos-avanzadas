@@ -16,7 +16,7 @@ public class MainCompare {
             int n = sc.nextInt(); // número de pacientes
             System.out.println("Leyendo " + n + " pacientes desde " + filename + " ...");
 
-            List arreglo = new List(n);                  // Arreglo lineal
+            ListStructure arreglo = new ListStructure(n);                  // Arreglo lineal
             PatientHashTable tabla = new PatientHashTable(); // HashTable
 
             long insertArrayTime = 0L;
