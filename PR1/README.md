@@ -46,25 +46,20 @@ java TriageSystem
 
 En las siguientes gráficas comparamos el desempeño de las dos estructuras de datos escogidas para el proyecto (lista ligada ordenada y árbol binario). En las gráficas el eje de las X representa el número de pacientes y el eje de las Y representa el tiempo agregado.
 
-<img src="Lista.jpeg" alt="lista_ligada" width="400">  
+<img src="Lista.jpeg" alt="Lista" width="400">  
 En primer lugar, observemos que en la gráfica se muestra el desempeño de las funciones insert, search y delete de la clase lista ligada ordenada. Podemos ver que la más tarda es la de insert, esto es porque cada vez hay más elementos y tiene que ingresarlos a corde su prioridad y recorre toda la lista hasta encontrar la prioridad correspondiente. 
 
 
-<img src="Hash.jpeg" alt="arbol_binario" width="400">  
+<img src="Hash.jpeg" alt="Hash" width="400">  
 En la segunda gráfica podemos observar el desempeño de las mismas funciones pero en el árbol binario. El desempeño de las funciones fue bastante similar debido a cómo funciona el árbol binario.
 
-<img src="Comparacion.jpeg" alt="insert" width="400">  
+<img src="Comparacion.jpeg" alt="Comparacion" width="400">  
 En desempeño en la función Insert podemos observar como al principio las dos estructuras van parejas en base al tiempo, pero después en la lista se va acumulando mucho el tiempo de insertar a comparación del árbol. El cual conviene más si la cantidad de datos es más grande, esto es por que la lista ligada tiene que recorrer toda la lista al insertar un nuevo elemento y aumenta el tiempo de recorrido entre mas larga sea la lista.
-
-<img src="search.jpg" alt="search" width="400">  
-En la función Search la lista ordenada tardó más que el árbol binario pero la diferencia no fue tan marcada, ya que en la lista doblemente ligada no existe acceso directo a los elementos aunque esté ordenada, se debe recorrer nodo por nodo hasta encontrar al paciente, lo que implica un costo lineal. En cambio, el árbol binario de búsqueda aprovecha su estructura jerárquica para descartar la mitad de los elementos en cada comparación.
-
-<img src="delete.jpg" alt="delete" width="400">  
-Y por último, en la función delete se comportó mejor la estructura de lista enlazada que la de árbol binario, porque la lista ligada ordenada siempre coloca al paciente de mayor prioridad al inicio; para atenderlo solo se quita el primer nodo, sin necesidad de recorrer ni reorganizar nada. En cambio, en un árbol binario primero hay que localizar el paciente más prioritario y después ajustar las conexiones entre nodos, lo que implica más pasos.
 
 ##  Conclusion final
 
 En conclusion a lista ordenada permite eliminar al paciente con mayor prioridad con mayor facilidad, pero sufre al insertar nuevos pacientes, ya que debe recorrer la lista para mantener el orden, resultando en un mayor tiempo de ejecucion. Por otro lado, el BST equilibra mejor las operaciones: tanto la inserción como la búsqueda y eliminación se realizan rapidamente. La comparación experimental entre ambas estructuras evidencia que la lista es más eficiente en escenarios con pocas inserciones y muchas eliminaciones, mientras que el árbol resulta más escalable y robusto cuando el volumen de pacientes aumenta. Esto demuestra la importancia de seleccionar la estructura de datos adecuada según las características del problema real.  
+
 
 
 
