@@ -9,7 +9,7 @@ public class LeerPacientes {
     public static void main(String[] args) {
         String ruta = (args.length > 0) ? args[0] : "pacientes.txt";
         try {
-            List<double[]> pacientes = leerPacientes(new File(ruta));
+            List<double[]> pacientes = LeerPacientes(new File(ruta));
 
             // Demo: imprimir lo leído
             for (int i = 0; i < pacientes.size(); i++) {
@@ -24,7 +24,7 @@ public class LeerPacientes {
     }
 
     /** Lee un archivo donde cada línea representa un paciente con 10 números. */
-    public static List<double[]> leerPacientes(File archivo) throws FileNotFoundException {
+    public static List<double[]> LeerPacientes(File archivo) throws FileNotFoundException {
         List<double[]> lista = new ArrayList<>();
 
         // Scanner con charset explícito. Usamos \R para separar por saltos de línea.
