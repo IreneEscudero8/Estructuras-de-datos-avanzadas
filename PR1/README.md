@@ -25,19 +25,18 @@ El objetivo es simular la llegada en tiempo real de 1000 pacientes cada minuto a
 ## Estructura del proyecto
 ```plaintext
 
-├── Arbol_binario/
-│   ├── PatientBST.java      # Implementación del árbol binario de búsqueda (BST) para manejar pacientes
-│   ├── TreeNode.java        # Clase que representa cada nodo del árbol (contiene a un paciente y referencias a hijos)
-│   ├── Practica0.java       # Programa de prueba principal para validar el árbol binario
-│
-├── Lista_ligada_ordenada/
-│   ├── DblyLnkSctr.java     # Implementación de la lista doblemente ligada ordenada (manejo de pacientes por prioridad)
-│   ├── LnrDblNd.java        # Clase nodo de la lista doblemente ligada (contiene a un paciente y punteros prev/next)
-│   ├── ADTsException.java   # Clase de excepción personalizada para manejar errores en operaciones de la lista
-│   ├── TestTriage.java      # Programa de prueba principal para validar la lista ligada
-│
-├── Patient.java             # Clase que modela a un paciente con 10 valores en examenes 
-├── TriageSystem.java        # Simulación principal: genera pacientes y compara rendimiento entre lista y BST
+├─ src/
+│ ├─ LeerPacientes.java # Lectura robusta de datos (espacios o tabs)
+│ ├─ Patient.java # Clase que representa un paciente (10 enteros, equals + hashCode)
+│ ├─ LinearSolution.java # Versión con arreglo lineal
+│ ├─ HashSolution.java # Versión con tabla de hash
+│ ├─ MainCheck.java # Programa principal que corre ambas versiones
+│ └─ Benchmark.java # Script para medir tiempos y comparar
+├─ data/
+│ ├─ ejemplo.txt # Ejemplo de entrada
+│ └─ gen/ # Datos grandes para pruebas (opcional)
+├─ README.md # Este archivo
+└─ Makefile # Opcional, para compilar/ejecutar rápido
 ├── README.md                # Documentación del proyecto
 ```
 ---
