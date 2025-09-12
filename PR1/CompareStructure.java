@@ -10,7 +10,7 @@ import java.util.Random;
 public class CompareStructure {
 
     public static void main(String[] args) {
-        int N = 10000; // Número de pacientes a generar
+        int N = 1; // Número de pacientes a generar
         Random rand = new Random();
 
         // Generar pacientes aleatorios (10 exámenes cada uno, valores 0–1000)

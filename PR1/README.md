@@ -47,12 +47,15 @@ java TriageSystem
 En las siguientes gráficas comparamos el desempeño de las dos estructuras de datos escogidas para el proyecto (lista ligada ordenada y árbol binario). En las gráficas el eje de las X representa el número de pacientes y el eje de las Y representa el tiempo agregado.
 
 <img src="Lista.jpeg" alt="Lista" width="400">  
+<img src="Lista.jpeg" alt="Lista" width="400">
 En primer lugar, observemos que en la gráfica se muestra el desempeño de las funciones insert, search y delete de la clase lista ligada ordenada. Podemos ver que la más tarda es la de insert, esto es porque cada vez hay más elementos y tiene que ingresarlos a corde su prioridad y recorre toda la lista hasta encontrar la prioridad correspondiente. 
 
 
 <img src="Hash.jpeg" alt="Hash" width="400">  
+<img src="Hash.jpeg" alt="Hash" width="400">
 En la segunda gráfica podemos observar el desempeño de las mismas funciones pero en el árbol binario. El desempeño de las funciones fue bastante similar debido a cómo funciona el árbol binario.
 
+<img src="Comparacion.jpeg" alt="Comparacion" width="400"> 
 <img src="Comparacion.jpeg" alt="Comparacion" width="400">  
 En desempeño en la función Insert podemos observar como al principio las dos estructuras van parejas en base al tiempo, pero después en la lista se va acumulando mucho el tiempo de insertar a comparación del árbol. El cual conviene más si la cantidad de datos es más grande, esto es por que la lista ligada tiene que recorrer toda la lista al insertar un nuevo elemento y aumenta el tiempo de recorrido entre mas larga sea la lista.
 
