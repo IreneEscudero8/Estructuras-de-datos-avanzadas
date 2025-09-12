@@ -3,7 +3,7 @@
  * Equipo: Luis Fernando Reyes, Andre Gorostieta, Irene Escudero
  * Clase que define una lista, un arreglo lineal, que almacena pacientes
  */
-public class List {
+public class ListStructure {
     private Patient[] list;
     private int count;
 
