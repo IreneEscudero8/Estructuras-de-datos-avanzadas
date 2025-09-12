@@ -19,17 +19,25 @@ El objetivo es leer un archivo con **n** pacientes (1 ≤ n ≤ 100,000), donde 
 
 ## Estructura del proyecto
 ```plaintext
-├── src/
-│   ├── LeerPacientes.java      # Lector robusto del archivo (lee n y luego n líneas con 10 enteros)
-│   ├── Patient.java            # Tupla inmutable de 10 enteros (equals/hashCode)
-│   ├── LinearSolution.java     # Detección con arreglo lineal (O(n²) peor/promedio)
-│   ├── HashSolution.java       # Detección con tabla de hash (O(n) promedio)
-│   ├── MainCheck.java          # Programa principal que imprime la salida requerida
-│   └── Benchmark.java          # Comparador de tiempos y generación de CSV
-├── data/
-│   └── ejemplo.txt             # Archivo de ejemplo con formato válido
-├── README.md                   # Este documento
-└── Makefile                    # (Opcional) Atajos para compilar/ejecutar
+PR1/
+├── archivo.txt                 # Archivo de entrada con datos de pacientes
+│
+├── Comparacion.jpeg            # Gráfica de comparación de desempeño (lineal vs hash)
+├── Comparacion2.jpeg           # Segunda gráfica de comparación
+├── Hash.jpeg                   # Gráfica enfocada en tabla hash
+├── Lista.jpeg                  # Gráfica enfocada en lista lineal
+│
+├── CompareStructures.java      # Clase que compara desempeño entre estructuras (lista vs hash)
+├── HashTest.java               # Pruebas unitarias / de validación para la implementación con hash
+├── LeerPacientes.java          # Lector de archivo: transforma cada línea en un paciente con 10 enteros
+├── ListStructure.java          # Implementación de lista lineal/secuencial para almacenar pacientes
+├── MainCompare.java            # Programa principal: ejecuta ambas versiones y mide tiempos
+├── Patient.java                # Clase que modela un paciente (arreglo de 10 enteros, equals y hashCode)
+├── PatientHashTable.java       # Implementación de tabla de hash para pacientes
+├── TestList.java               # Pruebas unitarias / de validación para la lista
+│
+├── README.md                   # Documentación del proyecto
+
 ```
 ---
 ##  Cómo ejecutar
@@ -61,6 +69,7 @@ Como es notorio, apartir de mas de 20 datos el hash se vuelve mas eficiente a la
 ##  Conclusion final
 
 En conclusion a lista ordenada permite eliminar al paciente con mayor prioridad con mayor facilidad, pero sufre al insertar nuevos pacientes, ya que debe recorrer la lista para mantener el orden, resultando en un mayor tiempo de ejecucion. Por otro lado, el BST equilibra mejor las operaciones: tanto la inserción como la búsqueda y eliminación se realizan rapidamente. La comparación experimental entre ambas estructuras evidencia que la lista es más eficiente en escenarios con pocas inserciones y muchas eliminaciones, mientras que el árbol resulta más escalable y robusto cuando el volumen de pacientes aumenta. Esto demuestra la importancia de seleccionar la estructura de datos adecuada según las características del problema real.  
+
 
 
 
