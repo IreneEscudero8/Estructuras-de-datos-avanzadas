@@ -54,12 +54,14 @@ La tabla hash tiene un muy buen desempeño con grandes volumenes de datos, ya qu
 <img src="Comparacion2.jpeg" alt="Comparacion2" width="400">  
 
 Como es notorio, apartir de mas de 20 datos el hash se vuelve mas eficiente a la lista. A continuacion se contraponen el Hash y la Lista en grupos de 1,000 en 1,000.
+
 <img src="Comparacion.jpeg" alt="Comparacion" width="400"> 
 
 
 ##  Conclusion final
 
 En conclusion a lista ordenada permite eliminar al paciente con mayor prioridad con mayor facilidad, pero sufre al insertar nuevos pacientes, ya que debe recorrer la lista para mantener el orden, resultando en un mayor tiempo de ejecucion. Por otro lado, el BST equilibra mejor las operaciones: tanto la inserción como la búsqueda y eliminación se realizan rapidamente. La comparación experimental entre ambas estructuras evidencia que la lista es más eficiente en escenarios con pocas inserciones y muchas eliminaciones, mientras que el árbol resulta más escalable y robusto cuando el volumen de pacientes aumenta. Esto demuestra la importancia de seleccionar la estructura de datos adecuada según las características del problema real.  
+
 
 
 
