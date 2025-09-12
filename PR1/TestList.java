@@ -3,7 +3,7 @@ import java.util.Random;
 public class TestList {
     public static void main(String[] args) {
         int totalPatientes = 15;
-        List lista = new List(totalPatientes);
+        ListStructure lista = ListStructure(totalPatientes);
         
         // Creamos los 3 grupos de datos de exámenes que sabemos que se repetiran 5, 4 y 3 veces
         int[] GrupoCincoIguales = generaExamen();
