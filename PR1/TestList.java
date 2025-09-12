@@ -1,9 +1,15 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+package pr1_1;
+
 import java.util.Random;
 
 public class TestList {
     public static void main(String[] args) {
         int totalPatientes = 15;
-        ListStructure lista = ListStructure(totalPatientes);
+        ListStructure lista = new ListStructure(totalPatientes);
         
         // Creamos los 3 grupos de datos de exámenes que sabemos que se repetiran 5, 4 y 3 veces
         int[] GrupoCincoIguales = generaExamen();
