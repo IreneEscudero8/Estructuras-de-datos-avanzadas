@@ -25,17 +25,25 @@ El objetivo es simular la llegada en tiempo real de 1000 pacientes cada minuto a
 ## Estructura del proyecto
 ```plaintext
 
-├─ src/
-│ ├─ LeerPacientes.java # Lectura robusta de datos (espacios o tabs)
-│ ├─ Patient.java # Clase que representa un paciente (10 enteros, equals + hashCode)
-│ ├─ LinearSolution.java # Versión con arreglo lineal
-│ ├─ HashSolution.java # Versión con tabla de hash
-│ ├─ MainCheck.java # Programa principal que corre ambas versiones
-│ └─ Benchmark.java # Script para medir tiempos y comparar
-├─ data/
-│ ├─ ejemplo.txt # Ejemplo de entrada
-│ └─ gen/ # Datos grandes para pruebas (opcional)
-├── README.md                # Documentación del proyecto
+PR1/
+├── archivo.txt                 # Archivo de entrada con datos de pacientes
+│
+├── Comparacion.jpeg            # Gráfica de comparación de desempeño (lineal vs hash)
+├── Comparacion2.jpeg           # Segunda gráfica de comparación
+├── Hash.jpeg                   # Gráfica enfocada en tabla hash
+├── Lista.jpeg                  # Gráfica enfocada en lista lineal
+│
+├── CompareStructures.java      # Clase que compara desempeño entre estructuras (lista vs hash)
+├── HashTest.java               # Pruebas unitarias / de validación para la implementación con hash
+├── LeerPacientes.java          # Lector de archivo: transforma cada línea en un paciente con 10 enteros
+├── ListStructure.java          # Implementación de lista lineal/secuencial para almacenar pacientes
+├── MainCompare.java            # Programa principal: ejecuta ambas versiones y mide tiempos
+├── Patient.java                # Clase que modela un paciente (arreglo de 10 enteros, equals y hashCode)
+├── PatientHashTable.java       # Implementación de tabla de hash para pacientes
+├── TestList.java               # Pruebas unitarias / de validación para la lista
+│
+├── README.md                   # Documentación del proyecto
+
 ```
 ---
 ##  Cómo ejecutar
