@@ -36,7 +36,7 @@ El objetivo es simular la llegada en tiempo real de 1000 pacientes cada minuto a
 │   ├── ADTsException.java   # Clase de excepción personalizada para manejar errores en operaciones de la lista
 │   ├── TestTriage.java      # Programa de prueba principal para validar la lista ligada
 │
-├── Patient.java             # Clase que modela a un paciente (nombre, ID, prioridad, etc.)
+├── Patient.java             # Clase que modela a un paciente con 10 valores en examenes 
 ├── TriageSystem.java        # Simulación principal: genera pacientes y compara rendimiento entre lista y BST
 ├── README.md                # Documentación del proyecto
 ```
