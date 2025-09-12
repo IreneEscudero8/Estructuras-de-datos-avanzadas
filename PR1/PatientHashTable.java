@@ -1,35 +1,39 @@
-import java.util.HashSet;
-import java.util.Set;
+import java.util.HashMap;
+import java.util.Map;
 
 /**
  * PROYECTO ESTRUCTURA DE DATOS AVANZADAS 
  * Equipo: Luis Fernando Reyes, Andre Gorostieta, Irene Escudero 
- * * Esta clase implementa una tabla de hash para almacenar y procesar registros de pacientes.
- * Utiliza un HashSet interno para detectar eficientemente los registros idénticos.
+ * Esta clase implementa una tabla de hash para almacenar y procesar registros de pacientes.
+ * Ahora cuenta el total de pacientes idénticos, igual que la lista lineal.
  */
 public class PatientHashTable {
 
-    private Set<Patient> uniquePatients;
-    
+    private Map<Patient, Integer> patientCounts;
     private int identicalPatientsCount;
 
     public PatientHashTable() {
-        this.uniquePatients = new HashSet<>();
+        this.patientCounts = new HashMap<>();
         this.identicalPatientsCount = 0;
     }
 
     public void addPatient(Patient patient) {
-        if (!uniquePatients.add(patient)) {
-            this.identicalPatientsCount++;
+        int count = patientCounts.getOrDefault(patient, 0);
+        count++;
+        patientCounts.put(patient, count);
+
+        // Si el paciente aparece más de una vez, sumamos este nuevo a duplicados
+        if (count > 1) {
+            identicalPatientsCount++;
         }
     }
 
     public int getIdenticalPatientsCount() {
         return this.identicalPatientsCount;
     }
-    
-    public int getUniquePatientCount(){
-        return this.uniquePatients.size();
+
+    public int getUniquePatientCount() {
+        return this.patientCounts.size();
     }
 
     public void printResults() {
@@ -39,5 +43,4 @@ public class PatientHashTable {
             System.out.println("no hay dos pacientes con registros idénticos");
         }
     }
-
 }
