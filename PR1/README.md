@@ -44,15 +44,13 @@ java TriageSystem
 
 ## Gráficas e interpretaciones
 
-En las siguientes gráficas comparamos el desempeño de las dos estructuras de datos escogidas para el proyecto (lista ligada ordenada y árbol binario). En las gráficas el eje de las X representa el número de pacientes y el eje de las Y representa el tiempo agregado.
+En las siguientes gráficas comparamos el desempeño de las dos estructuras de datos (La lista como manera de ordenamiento lineal y la tabla hash) Se realizaron usando la clase compare structure variando N, que es el total de pacientes, en grupos de 1,000 en 1,000. Tambien se forzo en esto a que hubiera 4 elemntos repetidos.
 
 <img src="Lista.jpeg" alt="Lista" width="400">  
-<img src="Lista.jpeg" alt="Lista" width="400">
 En primer lugar, observemos que en la gráfica se muestra el desempeño de las funciones insert, search y delete de la clase lista ligada ordenada. Podemos ver que la más tarda es la de insert, esto es porque cada vez hay más elementos y tiene que ingresarlos a corde su prioridad y recorre toda la lista hasta encontrar la prioridad correspondiente. 
 
 
 <img src="Hash.jpeg" alt="Hash" width="400">  
-<img src="Hash.jpeg" alt="Hash" width="400">
 En la segunda gráfica podemos observar el desempeño de las mismas funciones pero en el árbol binario. El desempeño de las funciones fue bastante similar debido a cómo funciona el árbol binario.
 
 <img src="Comparacion.jpeg" alt="Comparacion" width="400"> 
@@ -62,6 +60,7 @@ En desempeño en la función Insert podemos observar como al principio las dos e
 ##  Conclusion final
 
 En conclusion a lista ordenada permite eliminar al paciente con mayor prioridad con mayor facilidad, pero sufre al insertar nuevos pacientes, ya que debe recorrer la lista para mantener el orden, resultando en un mayor tiempo de ejecucion. Por otro lado, el BST equilibra mejor las operaciones: tanto la inserción como la búsqueda y eliminación se realizan rapidamente. La comparación experimental entre ambas estructuras evidencia que la lista es más eficiente en escenarios con pocas inserciones y muchas eliminaciones, mientras que el árbol resulta más escalable y robusto cuando el volumen de pacientes aumenta. Esto demuestra la importancia de seleccionar la estructura de datos adecuada según las características del problema real.  
+
 
 
 
