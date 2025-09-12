@@ -35,8 +35,6 @@ El objetivo es simular la llegada en tiempo real de 1000 pacientes cada minuto a
 ├─ data/
 │ ├─ ejemplo.txt # Ejemplo de entrada
 │ └─ gen/ # Datos grandes para pruebas (opcional)
-├─ README.md # Este archivo
-└─ Makefile # Opcional, para compilar/ejecutar rápido
 ├── README.md                # Documentación del proyecto
 ```
 ---
