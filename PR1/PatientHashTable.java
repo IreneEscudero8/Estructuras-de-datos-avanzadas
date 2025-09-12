@@ -21,12 +21,16 @@ public class PatientHashTable {
         int count = patientCounts.getOrDefault(patient, 0);
         count++;
         patientCounts.put(patient, count);
-
-        // Si el paciente aparece más de una vez, sumamos este nuevo a duplicados
-        if (count > 1) {
+    
+        if (count == 2) {
+            // Cuando llega el segundo, contamos los dos (el primero y este)
+            identicalPatientsCount += 2;
+        } else if (count > 2) {
+            // Para los demás duplicados, contamos de uno en uno
             identicalPatientsCount++;
         }
     }
+
 
     public int getIdenticalPatientsCount() {
         return this.identicalPatientsCount;
@@ -44,3 +48,4 @@ public class PatientHashTable {
         }
     }
 }
+
