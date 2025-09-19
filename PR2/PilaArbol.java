@@ -13,7 +13,7 @@ public class PilaArbol<T> {
     }
 
     public PilaArbol(T dato){
-        raiz=null;
+        cima=null;
     }
 
     public void push(T dato) {
