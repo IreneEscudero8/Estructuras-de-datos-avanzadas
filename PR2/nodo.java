@@ -1,3 +1,8 @@
+/**
+ * PROYECTO ESTRUCTURA DE DATOS AVANZADAS
+ * Equipo: Luis Fernando Reyes, Andre Gorostieta, Irene Escudero
+ * Clase Nodo generico
+ */
 private static class Nodo<T> {
         T dato;
         Nodo<T> siguiente;
@@ -7,3 +12,4 @@ private static class Nodo<T> {
             this.siguiente = null;
         }
 }
+
