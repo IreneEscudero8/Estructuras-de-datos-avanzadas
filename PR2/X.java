@@ -1,4 +1,6 @@
 /**
+ * PROYECTO ESTRUCTURA DE DATOS AVANZADAS
+ * Equipo: Luis Fernando Reyes, Andre Gorostieta, Irene Escudero
  * Clase que implementa una pila para procesar nodos de un árbol binario de manera iterativa.
  * Utiliza una estructura de pila basada en nodos para recorrer el árbol sin recursión.
  */
@@ -79,3 +81,4 @@ class ProcesadorArbol {
         }
     }
 }
+
