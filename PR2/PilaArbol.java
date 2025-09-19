@@ -5,54 +5,44 @@
  * Utiliza una estructura de pila basada en nodos para recorrer el árbol sin recursión.
  */
 public class PilaArbol<T> {
-    // Nodo interno de la pila
     
-    private Nodo<T> raiz; // Referencia al nodo en la cima de la pila (ahora llamado 'raiz')
-
+    private Nodo<T> cima; 
+    
     public PilaArbol() {
-        raiz = null;
+        cima = null;
     }
 
     public PilaArbol(T dato){
         raiz=null;
     }
 
-    /**
-     * Inserta un elemento en la cima de la pila.
-     */
     public void push(T dato) {
         Nodo<T> nuevo = new Nodo<>(dato);
-        nuevo.siguiente = raiz;
-        raiz = nuevo;
+        nuevo.siguiente = cima;
+        cima = nuevo;
     }
 
-    /**
-     * Elimina y retorna el elemento en la cima de la pila.
-     */
     public T pop() {
         if (estaVacia()) {
             throw new RuntimeException("La pila está vacía");
         }
-        T dato = raiz.dato;
-        raiz = raiz.siguiente;
+        T dato = cima.dato;
+        cima = cima.siguiente;
         return dato;
     }
 
-    /**
-     * Retorna el elemento en la cima sin eliminarlo.
-     */
     public T peek() {
         if (estaVacia()) {
             throw new RuntimeException("La pila está vacía");
         }
-        return raiz.dato;
+        return cima.dato;
     }
 
     /**
      * Verifica si la pila está vacía.
      */
     public boolean estaVacia() {
-        return raiz == null;
+        return cima == null;
     }
 }
 
@@ -70,10 +60,10 @@ class NodoArbol {
 
 class ProcesadorArbol {
     // Recorrido preorden iterativo usando la pila
-    public void preordenIterativo(NodoArbol raiz) {
-        if (raiz == null) return;
+    public void preordenIterativo(NodoArbol cima) {
+        if (cima == null) return;
         PilaArbol<NodoArbol> pila = new PilaArbol<>();
-        pila.push(raiz);
+        pila.push(cima);
 
         while (!pila.estaVacia()) {
             NodoArbol actual = pila.pop();
@@ -85,4 +75,5 @@ class ProcesadorArbol {
         }
     }
 }
+
 
