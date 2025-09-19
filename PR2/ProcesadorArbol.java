@@ -1,5 +1,5 @@
 
-class ProcesadorArbol {
+public class ProcesadorArbol {
     // Recorrido preorden iterativo usando la pila
     public void preordenIterativo(NodoArbol cima) {
         if (cima == null) return;
