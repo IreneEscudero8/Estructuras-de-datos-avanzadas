@@ -13,6 +13,10 @@ public class PilaArbol<T> {
         raiz = null;
     }
 
+    public PilaArbol(T dato){
+        raiz=null;
+    }
+
     /**
      * Inserta un elemento en la cima de la pila.
      */
