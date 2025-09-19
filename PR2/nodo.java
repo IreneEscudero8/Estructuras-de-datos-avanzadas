@@ -3,7 +3,7 @@
  * Equipo: Luis Fernando Reyes, Andre Gorostieta, Irene Escudero
  * Clase Nodo generico
  */
-private class Nodo<T>{
+class Nodo<T>{
         T dato;
         Nodo<T> siguiente;
 
