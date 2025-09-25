@@ -24,7 +24,7 @@ public class PilaArbol<T> {
 
     public T pop() {
         if (estaVacia()) {
-            throw new RuntimeException("La pila está vacía");
+            return null; 
         }
         T dato = cima.dato;
         cima = cima.siguiente;
@@ -33,14 +33,12 @@ public class PilaArbol<T> {
 
     public T peek() {
         if (estaVacia()) {
-            throw new RuntimeException("La pila está vacía");
+            return null; 
         }
         return cima.dato;
     }
 
-    /**
-     * Verifica si la pila está vacía.
-     */
+    // Verifica si la pila está vacía.
     public boolean estaVacia() {
         return cima == null;
     }
