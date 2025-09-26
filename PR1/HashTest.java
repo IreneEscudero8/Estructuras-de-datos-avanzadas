@@ -15,13 +15,13 @@ public class HashTest {
         int[] exams6 = {45, 92, 85, 10}; // Mismos valores que exams1, pero en otro orden
         int[] exams7 = {120, 80, 75, 60};
 
-        Patient paciente1 = new Patient(exams1);
-        Patient paciente2 = new Patient(exams2);
-        Patient paciente3 = new Patient(exams3);
-        Patient paciente4 = new Patient(exams4);
-        Patient paciente5 = new Patient(exams5);
-        Patient paciente6 = new Patient(exams6);
-        Patient paciente7 = new Patient(exams7);
+        Patient2 paciente1 = new Patient2(exams1);
+        Patient2 paciente2 = new Patient2(exams2);
+        Patient2 paciente3 = new Patient2(exams3);
+        Patient2 paciente4 = new Patient2(exams4);
+        Patient2 paciente5 = new Patient2(exams5);
+        Patient2 paciente6 = new Patient2(exams6);
+        Patient2 paciente7 = new Patient2(exams7);
         
         System.out.println("Añadiendo pacientes a la tabla...");
 
