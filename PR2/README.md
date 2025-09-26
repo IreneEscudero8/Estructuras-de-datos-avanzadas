@@ -70,15 +70,14 @@ En las siguientes gráficas comparamos el desempeño de las dos estructuras de d
 La lista mostro un desempeño similar a la funcion exponencial en cuanto a tiempo, cada vez que se le agregan datos su tiempo de recorrido va aumentando ya que cada vez hay mas datos que recorrer, y debe de recorrerlos todos en cada iteracion. Pero por otro lado contextos con bajos volumenes de datos son muy eficientes ya recorren rapido todos los datos.
 
 
-<img src="TiempoPeso.jpeg" alt="Lista" width="400"> 
+<img src="TiempoPesoPR2.jpeg" alt="Lista" width="400"> 
 La tabla hash tiene un muy buen desempeño con grandes volumenes de datos. Sin embargo, con pocos volumenes de datos sigue siendo eficiente aunque hay mejores alternativas, como se puede ver en la grafica siguiente.
 <img src="TiempoRutas.jpeg" alt="Comparacion2" width="400">  
 
 Como es notorio, apartir de mas de 20 datos el hash se vuelve mas eficiente a la lista. A continuacion se contraponen el Hash y la Lista en grupos de 1,000 en 1,000.
 
-<img src="TiempoCalles.jpeg" alt="Comparacion" width="400"> 
-<img src="TiempoAltura.jpeg" alt="Comparacion" width="400"> 
-
+<img src="TiempoCallesPR2.jpeg" alt="Comparacion" width="400"> 
+<img src="TiempoAlturaPR2.jpeg" alt="Comparacion" width="400"> 
 
 ##  Conclusion final
 
