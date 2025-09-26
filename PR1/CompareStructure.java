@@ -23,13 +23,11 @@ public class CompareStructure {
             pacientes[i] = new Patient2(exams);
         }
 
-        // ✅ Forzar al menos un duplicado:
+        // Forzar al menos un duplicado:
         // copiamos el paciente en la posición 0 al final de la lista
         pacientes[N - 1] = pacientes[0];
 
-        // -------------------------------
         // LISTA LINEAL
-        // -------------------------------
         ListStructure lista = new ListStructure(N);
         long start = System.nanoTime();
         for (Patient2 p : pacientes) {
@@ -39,9 +37,7 @@ public class CompareStructure {
         long end = System.nanoTime();
         long tiempoLista = end - start;
 
-        // -------------------------------
         // TABLA HASH
-        // -------------------------------
         PatientHashTable hashTable = new PatientHashTable();
         start = System.nanoTime();
         for (Patient2 p : pacientes) {
@@ -51,9 +47,7 @@ public class CompareStructure {
         end = System.nanoTime();
         long tiempoHash = end - start;
 
-        // -------------------------------
         // RESULTADOS
-        // -------------------------------
         System.out.println("=== RESULTADOS ===");
         System.out.println("Pacientes generados: " + N);
 
