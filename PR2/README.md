@@ -81,5 +81,5 @@ Como es notorio, apartir de mas de 20 datos el hash se vuelve mas eficiente a la
 
 ##  Conclusion final
 
-La comparación directa revela el punto de inflexión: la tabla de hash supera en eficiencia a la lista lineal con tan solo unas pocas decenas de registros. Para conjuntos de datos grandes, la diferencia no es marginal, sino de varios órdenes de magnitud, haciendo de la tabla de hash la única opción viable para una aplicación real. En definitiva, este proyecto demuestra empíricamente que para problemas de búsqueda, inserción y detección de duplicados en grandes volúmenes de datos, la tabla de hash es una solución categóricamente superior a las búsquedas lineales. Su capacidad para distribuir y acceder a los datos de manera casi instantánea la convierte en una herramienta fundamental en el desarrollo de software eficiente y escalable.
-
+Este proyecto demuestra la utilidad de la recursión en problemas donde las soluciones pueden representarse naturalmente como árboles, como es el caso de la recolección de paquetes en diferentes oficinas. Además, permite comparar dos enfoques alternativos (recursivo e iterativo), mostrando que, para este tipo de problema, la solución recursiva es la más adecuada en términos de claridad y eficiencia.
+La comparación entre ambos enfoques también destaca las diferencias en la complejidad y el tiempo de ejecución, lo que es crucial al diseñar soluciones eficientes para problemas reales.
