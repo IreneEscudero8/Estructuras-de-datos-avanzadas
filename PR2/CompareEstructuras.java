@@ -3,7 +3,9 @@ import java.util.List;
 import java.util.Random;
 
 /**
- * Clase auxiliar para almacenar los 8 resultados de tiempo para una prueba con un N específico.
+ * PROYECTO ESTRUCTURA DE DATOS AVANZADAS
+ * Equipo: Luis Fernando Reyes, Andre Gorostieta, Irene Escudero
+ * Clase para obtener los datos para graficar la comparación entre métodos iterativos y recursivos.
  */
 class ResultadoPrueba {
     int numHojas;
@@ -33,10 +35,9 @@ public class CompareEstructuras {
         Random rand = new Random();
         ProcesadorArbol proc = new ProcesadorArbol();
         
-        // Lista para almacenar los objetos con los resultados de cada prueba
+        // Lista para almacenar los objetos con los resultados 
         List<ResultadoPrueba> listaDeResultados = new ArrayList<>();
-
-        // 1. FASE DE EJECUCIÓN Y RECOLECCIÓN DE DATOS
+   
         for (int n : tamanosDePrueba) {
             NodoArbol raiz = generarArbolAleatorio(n, rand);
             ResultadoPrueba resActual = new ResultadoPrueba();
@@ -75,10 +76,7 @@ public class CompareEstructuras {
             listaDeResultados.add(resActual);
         }
 
-        // 2. FASE DE IMPRESIÓN DETALLADA
-        System.out.println("=========================================");
         System.out.println("=== LISTA FINAL DE TIEMPOS DE EJECUCIÓN ===");
-        System.out.println("=========================================");
         
         for (ResultadoPrueba res : listaDeResultados) {
             System.out.println("--- Resultados para N = " + res.numHojas + " Hojas ---");
@@ -86,7 +84,7 @@ public class CompareEstructuras {
             System.out.printf("Altura: Iterativo = %.4f ms | Recursivo = %.4f ms\n", res.tiempoAlturaIter, res.tiempoAlturaRec);
             System.out.printf("Calles: Iterativo = %.4f ms | Recursivo = %.4f ms\n", res.tiempoCallesIter, res.tiempoCallesRec);
             System.out.printf("Ruta:   Iterativo = %.4f ms | Recursivo = %.4f ms\n", res.tiempoRutaIter, res.tiempoRutaRec);
-            System.out.println(); // Añade un espacio para mayor legibilidad
+            System.out.println(); 
         }
     }
 }
