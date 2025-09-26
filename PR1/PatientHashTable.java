@@ -9,7 +9,7 @@ import java.util.Map;
  */
 public class PatientHashTable {
 
-    private Map<Patient, Integer> patientCounts;
+    private Map<Patient2, Integer> patientCounts;
     private int identicalPatientsCount;
 
     public PatientHashTable() {
@@ -17,7 +17,7 @@ public class PatientHashTable {
         this.identicalPatientsCount = 0;
     }
 
-    public void addPatient(Patient patient) {
+    public void addPatient(Patient2 patient) {
         int count = patientCounts.getOrDefault(patient, 0);
         count++;
         patientCounts.put(patient, count);
