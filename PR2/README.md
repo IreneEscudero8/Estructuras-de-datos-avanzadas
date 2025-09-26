@@ -58,7 +58,7 @@ PR3/
  1. **Compilar todos los archivos**
 
  2. **Ejecutar el programa principal:**
-java MainCompare, cambiando el "arboles.txt" por el archivo deseado
+En TestComparacion, cambiando el "arboles.txt" por el archivo deseado
 
 ---
 
