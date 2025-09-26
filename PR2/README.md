@@ -72,7 +72,7 @@ La lista mostró un desempeño similar a la función exponencial en cuanto a tie
 <img src="TiempoPesoPR2.jpeg" alt="Lista" width="400">  
 La tabla hash tiene un muy buen desempeño con grandes volúmenes de datos. Sin embargo, con volúmenes pequeños de datos, sigue siendo eficiente, aunque existen mejores alternativas, como se puede ver en la gráfica siguiente.
 
-<img src="TiempoRutas.jpeg" alt="Comparacion2" width="400">  
+<img src="TiempoRutasPR2.jpeg" alt="Comparacion2" width="400">  
 
 Como es notorio, a partir de más de 20 datos, el hash se vuelve más eficiente que la lista. A continuación, se contraponen el Hash y la Lista en grupos de 1,000 en 1,000.
 
