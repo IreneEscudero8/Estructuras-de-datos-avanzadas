@@ -7,7 +7,7 @@ public class ListStructure {
     private Patient[] list;
     private int count;
 
-    public List(int n) {
+    public ListStructure(int n) {
        list= new Patient[n];
        count= 0;
     }
