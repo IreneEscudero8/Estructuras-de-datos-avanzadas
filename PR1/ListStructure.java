@@ -4,15 +4,15 @@
  * Clase que define una lista, un arreglo lineal, que almacena pacientes
  */
 public class ListStructure {
-    private Patient[] list;
+    private Patient2[] list;
     private int count;
 
     public ListStructure(int n) {
-       list= new Patient[n];
+       list= new Patient2[n];
        count= 0;
     }
  
-    public boolean addPatient(Patient person){
+    public boolean addPatient(Patient2 person){
         boolean agregado=false;
         if(count<list.length){
             agregado=true;
