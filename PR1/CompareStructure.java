@@ -14,13 +14,13 @@ public class CompareStructure {
         Random rand = new Random();
 
         // Generar pacientes aleatorios (10 exámenes cada uno, valores 0–1000)
-        Patient[] pacientes = new Patient[N];
+        Patient2[] pacientes = new Patient2[N];
         for (int i = 0; i < N; i++) {
             int[] exams = new int[10];
             for (int j = 0; j < 10; j++) {
                 exams[j] = rand.nextInt(1000);
             }
-            pacientes[i] = new Patient(exams);
+            pacientes[i] = new Patient2(exams);
         }
 
         // ✅ Forzar al menos un duplicado:
@@ -32,7 +32,7 @@ public class CompareStructure {
         // -------------------------------
         ListStructure lista = new ListStructure(N);
         long start = System.nanoTime();
-        for (Patient p : pacientes) {
+        for (Patient2 p : pacientes) {
             lista.addPatient(p);
         }
         int repetidosLista = lista.repetidos();
@@ -44,7 +44,7 @@ public class CompareStructure {
         // -------------------------------
         PatientHashTable hashTable = new PatientHashTable();
         start = System.nanoTime();
-        for (Patient p : pacientes) {
+        for (Patient2 p : pacientes) {
             hashTable.addPatient(p);
         }
         int repetidosHash = hashTable.getIdenticalPatientsCount();
