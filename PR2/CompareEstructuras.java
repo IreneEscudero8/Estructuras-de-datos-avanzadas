@@ -2,6 +2,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
+
 /**
  * PROYECTO ESTRUCTURA DE DATOS AVANZADAS
  * Equipo: Luis Fernando Reyes, Andre Gorostieta, Irene Escudero
