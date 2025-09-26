@@ -1,7 +1,7 @@
 # Proyecto: Recursión para la Recolección de Paquetes
 
 **Equipo:**  
-- - Luis Fernando Reyes Altamirano  
+- Luis Fernando Reyes Altamirano  
 - Ricardo André Gorostieta Jurado  
 - Irene Escudero Cazarez  
 
@@ -71,6 +71,7 @@ En las siguientes gráficas comparamos el desempeño de las dos estructuras de d
 
 
 La lista mostró un desempeño similar a la función exponencial en cuanto a tiempo; cada vez que se le agregan datos, su tiempo de recorrido va aumentando, ya que cada vez hay más datos que recorrer, y debe recorrerlos todos en cada iteración. Sin embargo, con contextos de bajos volúmenes de datos, sigue siendo muy eficiente, ya que recorre rápidamente todos los datos.
+
 <img src="TablaPR2.jpeg" alt="Lista" width="400">  
 
 <img src="TiempoPesoPR2.jpeg" alt="Lista" width="400">  
