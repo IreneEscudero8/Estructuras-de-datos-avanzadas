@@ -4,21 +4,25 @@
  * Clase que representa un nodo en el árbol binario utilizado para la distribución de paquetes.
  */
 public class NodoArbol {
-    int valor; // Almacena el peso si es una hoja, o se deja sin usar si es un nodo intermedio.
+    int valor;
     NodoArbol izquierdo, derecho;
+    boolean esHoja; 
 
-    NodoArbol(int valor) {
+    // Constructor para nodos hoja 
+    public NodoArbol(int valor) {
         this.valor = valor;
+        this.esHoja = true;
     }
 
-    // Constructor para nodos intermedios (sin valor, solo conexiones)
-    NodoArbol(NodoArbol izquierdo, NodoArbol derecho) {
+    // Constructor para nodos intermedios.
+    public NodoArbol(NodoArbol izquierdo, NodoArbol derecho) {
         this.izquierdo = izquierdo;
         this.derecho = derecho;
+        this.esHoja = false; 
     }
 
-    // Verifica si el nodo es una hoja (una oficina con paquetes)
+    // Método que verifica si el nodo es una hoja.
     public boolean esHoja() {
-        return izquierdo == null && derecho == null;
+        return esHoja;
     }
 }

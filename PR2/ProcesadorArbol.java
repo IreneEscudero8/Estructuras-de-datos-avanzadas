@@ -152,66 +152,69 @@ public String obtenerRutaIterativa(NodoArbol raiz) {
         }
         return callesTotalesRecursivo(arbol.izquierdo) + callesTotalesRecursivo(arbol.derecho) + 4;
     }
-        
-    // Obtiene la ruta óptima de forma recursiva, siguiendo el camino más largo.
+
+   // Obtiene la ruta óptima recursiva
     public String obtenerRutaRecursiva(NodoArbol arbol) {
-        // Si llegamos a un nodo nulo, no hay ruta.
-        if (arbol == null) {
-            return "";
-        }
-        // Si es una hoja retornamos su valor.
+        if (arbol == null) return "";
+        // caso hoja
         if (arbol.esHoja()) {
             return String.valueOf(arbol.valor);
         }
-        // determinar el camino más largo.
-        int alturaIzquierda = alturaArbol(arbol.izquierdo);
-        int alturaDerecha = alturaArbol(arbol.derecho);
-        if (alturaIzquierda >= alturaDerecha) {
-            return obtenerRutaRecursiva(arbol.izquierdo) + " <- " + arbol.valor;
+        int hIzq = alturaArbol(arbol.izquierdo);
+        int hDer = alturaArbol(arbol.derecho);
+
+        // primero visitamos el subarbol menos profundo
+        String rutaPrimero, rutaDespues;
+        if (hIzq <= hDer) {
+            rutaPrimero = obtenerRutaRecursiva(arbol.izquierdo);
+            rutaDespues = obtenerRutaRecursiva(arbol.derecho);
         } else {
-            return obtenerRutaRecursiva(arbol.derecho) + " <- " + arbol.valor;
+            rutaPrimero = obtenerRutaRecursiva(arbol.derecho);
+            rutaDespues = obtenerRutaRecursiva(arbol.izquierdo);
         }
+        // concatenamos rutas
+        if (rutaPrimero.isEmpty()) return rutaDespues;
+        if (rutaDespues.isEmpty()) return rutaPrimero;
+        return rutaPrimero + " -> " + rutaDespues;
     }
 
 
-//------------- CONSTRUCCIÓN DEL ÁRBOL DESDE UN STRING----------------------
+//------------- CONSTRUCCION DEL ARBOL DESDE UN STRING----------------------
     
     // Método para leer el árbol.
     public NodoArbol leerArbol(String linea) {
-        // Usa un scanner para procesar la línea de entrada.
+        // Reemplazar '(' con '( ' para que el Scanner los lea separados
+        linea = linea.replace("(", "( ").replace(")", " )");
         Scanner scanner = new Scanner(linea);
         return leerArbolHelper(scanner);
     }
-
-    // Metodo auxiliar 
+    
+    // Método auxiliar que construye el árbol de forma recursiva.
     private NodoArbol leerArbolHelper(Scanner scanner) {
         if (!scanner.hasNext()) {
             return null;
         }
+
         String next = scanner.next();
 
         if (next.equals("(")) {
-            // Es un nodo no hoja, tiene hijos
-            NodoArbol izquierdo = leerArbolHelper(scanner);
+            // Es un nodo intermedio 
+            NodoArbol izquierdo = leerArbolHelper(scanner); 
             NodoArbol derecho = leerArbolHelper(scanner);
-            // La siguiente lectura debe ser un ')'
+
+            // Siguiente lectura debe ser un ')'
             if (scanner.hasNext() && scanner.next().equals(")")) {
                 return new NodoArbol(izquierdo, derecho);
             }
         } else {
-            // Es un nodo hoja, tiene valor
+            // Es un nodo hoja 
             try {
                 int valor = Integer.parseInt(next);
                 return new NodoArbol(valor);
             } catch (NumberFormatException e) {
-                // Si no es un número y no '(' es incorrecto
                 return null;
             }
         }
-        return null; // En caso incorrecto
+        return null; 
     }
 }
-
-    
-
-

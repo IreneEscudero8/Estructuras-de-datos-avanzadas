@@ -4,7 +4,7 @@ import java.util.Scanner;
 public class TestComparacion {
     public static void main(String[] args) throws Exception {
         ProcesadorArbol procesador = new ProcesadorArbol();
-        Scanner sc = new Scanner(new File("entrada.txt"));
+        Scanner sc = new Scanner(new File("arboles.txt"));
 
         long totalRecPeso = 0, totalItPeso = 0;
         long totalRecAltura = 0, totalItAltura = 0;
