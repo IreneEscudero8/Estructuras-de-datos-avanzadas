@@ -53,33 +53,33 @@ PR3/
 ├── README.md                   # Documentación del proyecto
 
 ---
-##  Cómo ejecutar
+## <span style="color:blue;">Como ejecutar</span>
 
- 1. **Compilar todos los archivos**
+1. **Compilar todos los archivos**
 
- 2. **Ejecutar el programa principal:**
-En TestComparacion, cambiando el "arboles.txt" por el archivo deseado
+2. **Ejecutar el programa principal:**
+   En `TestComparacion`, cambiando el "arboles.txt" por el archivo deseado
 
 ---
 
-## Gráficas e interpretaciones
+## <span style="color:blue;">Gráficas e interpretaciones</span>
 
-En las siguientes gráficas comparamos el desempeño de las dos estructuras de datos (La lista como manera de ordenamiento lineal y la tabla hash) Se realizaron usando la clase compare structure variando N, que es el total de pacientes, en grupos de 1,000 en 1,000. Tambien se forzo en esto a que hubiera 4 elemntos repetidos.
+En las siguientes gráficas comparamos el desempeño de las dos estructuras de datos (La lista como manera de ordenamiento lineal y la tabla hash). Se realizaron usando la clase `compare structure` variando N, que es el total de pacientes, en grupos de 1,000 en 1,000. También se forzó en esto a que hubiera 4 elementos repetidos.
 
-<img src="TablaPR2.jpeg" alt="Lista" width="400"> 
-La lista mostro un desempeño similar a la funcion exponencial en cuanto a tiempo, cada vez que se le agregan datos su tiempo de recorrido va aumentando ya que cada vez hay mas datos que recorrer, y debe de recorrerlos todos en cada iteracion. Pero por otro lado contextos con bajos volumenes de datos son muy eficientes ya recorren rapido todos los datos.
+<img src="TablaPR2.jpeg" alt="Lista" width="400">  
+La lista mostró un desempeño similar a la función exponencial en cuanto a tiempo; cada vez que se le agregan datos, su tiempo de recorrido va aumentando, ya que cada vez hay más datos que recorrer, y debe recorrerlos todos en cada iteración. Sin embargo, con contextos de bajos volúmenes de datos, sigue siendo muy eficiente, ya que recorre rápidamente todos los datos.
 
+<img src="TiempoPesoPR2.jpeg" alt="Lista" width="400">  
+La tabla hash tiene un muy buen desempeño con grandes volúmenes de datos. Sin embargo, con volúmenes pequeños de datos, sigue siendo eficiente, aunque existen mejores alternativas, como se puede ver en la gráfica siguiente.
 
-<img src="TiempoPesoPR2.jpeg" alt="Lista" width="400"> 
-La tabla hash tiene un muy buen desempeño con grandes volumenes de datos. Sin embargo, con pocos volumenes de datos sigue siendo eficiente aunque hay mejores alternativas, como se puede ver en la grafica siguiente.
 <img src="TiempoRutas.jpeg" alt="Comparacion2" width="400">  
 
-Como es notorio, apartir de mas de 20 datos el hash se vuelve mas eficiente a la lista. A continuacion se contraponen el Hash y la Lista en grupos de 1,000 en 1,000.
+Como es notorio, a partir de más de 20 datos, el hash se vuelve más eficiente que la lista. A continuación, se contraponen el Hash y la Lista en grupos de 1,000 en 1,000.
 
-<img src="TiempoCallesPR2.jpeg" alt="Comparacion" width="400"> 
-<img src="TiempoAlturaPR2.jpeg" alt="Comparacion" width="400"> 
+<img src="TiempoCallesPR2.jpeg" alt="Comparacion" width="400">  
+<img src="TiempoAlturaPR2.jpeg" alt="Comparacion" width="400">  
 
-##  Conclusion final
+## <span style="color:blue;">Conclusión final</span>
 
-Este proyecto demuestra la utilidad de la recursión en problemas donde las soluciones pueden representarse naturalmente como árboles, como es el caso de la recolección de paquetes en diferentes oficinas. Además, permite comparar dos enfoques alternativos (recursivo e iterativo), mostrando que, para este tipo de problema, la solución recursiva es la más adecuada en términos de claridad y eficiencia.
+Este proyecto demuestra la utilidad de la recursión en problemas donde las soluciones pueden representarse naturalmente como árboles, como es el caso de la recolección de paquetes en diferentes oficinas. Además, permite comparar dos enfoques alternativos (recursivo e iterativo), mostrando que, para este tipo de problema, la solución recursiva es la más adecuada en términos de claridad y eficiencia.  
 La comparación entre ambos enfoques también destaca las diferencias en la complejidad y el tiempo de ejecución, lo que es crucial al diseñar soluciones eficientes para problemas reales.
