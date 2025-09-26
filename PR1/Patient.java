@@ -4,15 +4,15 @@
  * Clase que define un paciente por un arreglo con sus resultados de exámenes 
 */ 
 import java.util.Arrays;
-public class Patient { 
+public class Patient2 { 
     private int[] exams; 
     private final int DEFAULT_CAPACITY = 10;
     
-    public Patient() {
+    public Patient2() {
         exams = new int[DEFAULT_CAPACITY];
     }
 
-    public Patient(int[] exams) { 
+    public Patient2(int[] exams) { 
         this.exams= exams; 
     } 
 
@@ -28,7 +28,7 @@ public class Patient {
         if (obj == null || getClass() != obj.getClass()) {
             return false;
         }
-        Patient other = (Patient) obj;
+        Patient2 other = (Patient2) obj;
         return Arrays.equals(this.exams, other.exams);
     }
 
