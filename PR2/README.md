@@ -54,22 +54,24 @@ PR3/
 
 ---
 ```
-## <span style="color:blue;">Como ejecutar</span>
 
-1. **Compilar todos los archivos**
+## Como ejecutar
 
-2. **Ejecutar el programa principal:**
+1. Compilar todos los archivos
+
+2. Ejecutar el programa principal:
    En `TestComparacion`, cambiando el "arboles.txt" por el archivo deseado
 
 ---
 
-## <span style="color:blue;">Gráficas e interpretaciones</span>
+## Gráficas e interpretaciones
 
 En las siguientes gráficas comparamos el desempeño de las dos estructuras de datos (La lista como manera de ordenamiento lineal y la tabla hash). Se realizaron usando la clase `compare structure` variando N, que es el total de pacientes, en grupos de 1,000 en 1,000. También se forzó en esto a que hubiera 4 elementos repetidos.
 
 
 
 La lista mostró un desempeño similar a la función exponencial en cuanto a tiempo; cada vez que se le agregan datos, su tiempo de recorrido va aumentando, ya que cada vez hay más datos que recorrer, y debe recorrerlos todos en cada iteración. Sin embargo, con contextos de bajos volúmenes de datos, sigue siendo muy eficiente, ya que recorre rápidamente todos los datos.
+<img src="TablaPR2.jpeg" alt="Lista" width="400">  
 
 <img src="TiempoPesoPR2.jpeg" alt="Lista" width="400">  
 La tabla hash tiene un muy buen desempeño con grandes volúmenes de datos. Sin embargo, con volúmenes pequeños de datos, sigue siendo eficiente, aunque existen mejores alternativas, como se puede ver en la gráfica siguiente.
