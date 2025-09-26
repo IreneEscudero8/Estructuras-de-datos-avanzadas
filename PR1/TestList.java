@@ -37,7 +37,7 @@ public class TestList {
             } else { // Paciente único 3
                 examenes = examenUnicoTres;
             }
-            lista.addPatient(new Patient(examenes));
+            lista.addPatient(new Patient2(examenes));
         }
 
         // Función repetidos()

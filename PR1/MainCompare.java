@@ -30,7 +30,7 @@ public class MainCompare {
                     exams[j] = sc.nextInt();
                 }
 
-                Patient p = new Patient(exams);
+                Patient2 p = new Patient2(exams);
 
                 long t0 = System.nanoTime();
                 arreglo.addPatient(p);
