@@ -67,8 +67,10 @@ Una línea por cada día de la semana que indique:
 
 ## Gráficas e interpretaciones
 
+Pruebas hechas iterativamente y recursivamente con 20,40,60,80,100,120,140,160,180,200,220,240,255 hojas. Para ver que tanto les afecta la cantidad de hojas a las diferentes soluciones y compararlas
 
 
+Tabla de resultados de las pruebas:
 <img src="TablaPR2.jpeg" alt="Lista" width="400">  
 
 
