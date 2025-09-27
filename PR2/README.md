@@ -71,14 +71,20 @@ Una línea por cada día de la semana que indique:
 
 <img src="TablaPR2.jpeg" alt="Lista" width="400">  
 
+
+
 <img src="TiempoPesoPR2.jpeg" alt="Lista" width="400">  
-La tabla hash tiene un muy buen desempeño con grandes volúmenes de datos. Sin embargo, con volúmenes pequeños de datos, sigue siendo eficiente, aunque existen mejores alternativas, como se puede ver en la gráfica siguiente.
+El gráfico muestra que el algoritmo recursivo es significativamente más eficiente y consistente que la versión iterativa. Su tiempo de ejecución es mínimo, lo cual demuestra que para este problema, la recursión es la solución más práctica y óptima. El enfoque iterativo, por su parte, presenta una sobrecarga inicial que lo hace más lento.
+
 
 <img src="TiempoRutasPR2.jpeg" alt="Comparacion2" width="400">  
+El gráfico muestra que el cálculo de la ruta óptima presenta un comportamiento similar al del cálculo del peso. La implementación recursiva mantiene un rendimiento estable y superior, confirmando que este enfoque es el más eficiente para problemas de árboles en este proyecto. En contraste, la versión iterativa demuestra ser más volátil e inconsistente, especialmente en los tamaños de árbol más pequeños.
 
-Como es notorio, a partir de más de 20 datos, el hash se vuelve más eficiente que la lista. A continuación, se contraponen el Hash y la Lista en grupos de 1,000 en 1,000.
 
-<img src="TiempoCallesPR2.jpeg" alt="Comparacion" width="400">  
+<img src="TiempoCallesPR2.jpeg" alt="Comparacion" width="400">
+Este gráfico es notablemente diferente a los anteriores, ya que la versión recursiva no es consistentemente más rápida que la iterativa. Ambos métodos muestran un rendimiento irregular, lo que sugiere que el cálculo de las calles, al requerir más decisiones en cada nodo, es más complejo. A pesar de la variabilidad, la versión recursiva se mantiene en un tiempo de ejecución menor, lo que confirma su eficiencia para este tipo de problema.
+
+
 <img src="TiempoAlturaPR2.jpeg" alt="Comparacion" width="400">  
 Este gráfico muestra el tiempo que tardó el programa en encontrar la altura de la profundidad de las ramas del árbol que fue un cálculo clave que usamos para todos los demás métodos. Como se puede ver, el método recursivo lo hizo de manera muy rápida y parejo, sin altibajos. En cambio, el método iterativo tardó mucho más al principio y fue inconsistente, como en las gráficas y métodos anteriores.
 
