@@ -74,7 +74,7 @@ Tabla de resultados de las pruebas:
 
 <img src="TablaPR2.jpeg" alt="Lista" width="400">  
 
-
+Graficas realizadas:
 
 <img src="TiempoPesoPR2.jpeg" alt="Lista" width="400">  
 El gráfico muestra que el algoritmo recursivo es significativamente más eficiente y consistente que la versión iterativa. Su tiempo de ejecución es mínimo, lo cual demuestra que para este problema, la recursión es la solución más práctica y óptima. El enfoque iterativo, por su parte, presenta una sobrecarga inicial que lo hace más lento.
