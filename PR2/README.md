@@ -71,6 +71,7 @@ Pruebas hechas iterativamente y recursivamente con 20,40,60,80,100,120,140,160,1
 
 
 Tabla de resultados de las pruebas:
+
 <img src="TablaPR2.jpeg" alt="Lista" width="400">  
 
 
