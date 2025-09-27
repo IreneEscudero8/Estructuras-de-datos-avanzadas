@@ -5,8 +5,8 @@
 - Ricardo André Gorostieta Jurado  
 - Irene Escudero Cazarez  
 
-Tiempo de trabajo individual: 5–7 horas cada uno  
-Tiempo de trabajo total: 15–21 horas
+Tiempo de trabajo individual: 6–7 horas cada uno  
+Tiempo de trabajo total: 18–21 horas
 
 Este proyecto es parte de la práctica de **Recursión** de la materia **Estructura de Datos**. El objetivo principal es desarrollar un programa que permita al agente postal de **Correos de México** planificar las rutas para la recolección de paquetes en diferentes oficinas, basándose en un mapa con la distribución de las oficinas y el peso de los paquetes.
 
@@ -66,9 +66,7 @@ Una línea por cada día de la semana que indique:
 ---
 
 ## Gráficas e interpretaciones
-
-
-
+Tabla de tiempos de ejecucuión:
 <img src="TablaPR2.jpeg" alt="Lista" width="400">  
 
 <img src="TiempoPesoPR2.jpeg" alt="Lista" width="400">  
@@ -88,3 +86,4 @@ Este gráfico muestra el tiempo que tardó el programa en encontrar la altura de
 Este proyecto demuestra que la elección del algoritmo correcto es crucial para resolverde la manera más eficiente un problema. Aunque tanto la recursión como la iteración pueden resolverlo, los resultados de nuestras pruebas muestran diferencias significativas. Para problemas de árboles, la recursión se comportó de manera más eficiente y consistente, ya que su estructura para dividir un problema grande en subproblemas idénticos se alinea perfectamente con la naturaleza del árbol.
 
 Por otro lado, la versión iterativa, al requerir de una pila, introdujo un costo adicional que la hizo más lenta y menos predecible. Esto nos enseña que un análisis cuidadoso del problema y de la estructura de datos es fundamental para elegir la solución más práctica. En el mundo real, comprender estas diferencias es lo que nos permite escribir código que no solo funciona, sino que lo hace de la manera más óptima posible.
+
