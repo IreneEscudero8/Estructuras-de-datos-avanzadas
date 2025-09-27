@@ -66,18 +66,21 @@ PR3/
 
 ## Gráficas e interpretaciones
 
-
+En esta parte probamos las estructuras de datos, graficamos sus resultados con 
 
 <img src="TablaPR2.jpeg" alt="Lista" width="400">  
 
 <img src="TiempoPesoPR2.jpeg" alt="Lista" width="400">  
-La tabla hash tiene un muy buen desempeño con grandes volúmenes de datos. Sin embargo, con volúmenes pequeños de datos, sigue siendo eficiente, aunque existen mejores alternativas, como se puede ver en la gráfica siguiente.
+
 
 <img src="TiempoRutasPR2.jpeg" alt="Comparacion2" width="400">  
 
-Como es notorio, a partir de más de 20 datos, el hash se vuelve más eficiente que la lista. A continuación, se contraponen el Hash y la Lista en grupos de 1,000 en 1,000.
 
-<img src="TiempoCallesPR2.jpeg" alt="Comparacion" width="400">  
+<img src="TiempoCallesPR2.jpeg" alt="Comparacion" width="400">
+La gráfica muestra cómo varía el tiempo para calcular el número de calles recorridas por el agente con el número de hojas.
+Recursivo sigue siendo más eficiente que iterativo para la mayor parte del cálculo. Sin embargo, a medida que el número de hojas se incrementa, la versión iterativa comienza a mostrar un mayor aumento en tiempo, posiblemente debido a su necesidad de manejar la pila explícitamente.
+
+
 <img src="TiempoAlturaPR2.jpeg" alt="Comparacion" width="400">  
 
 ## <span style="color:blue;">Conclusión final</span>
