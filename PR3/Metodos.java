@@ -2,28 +2,28 @@ import java.util.Arrays;
 
 public class Metodos {
 
-    public int HamburguesasRec(int m, int n, int t) {
+    public int hamburguesasRec(int m, int n, int t) {
         if (t == 0) return 0;
-        int first = (t >= m) ? HamburguesasRec(m, n, t - m) : -1;
-        int second = (t >= n) ? HamburguesasRec(m, n, t - n) : -1;
+        int first = (t >= m) ? hamburguesasRec(m, n, t - m) : -1;
+        int second = (t >= n) ? hamburguesasRec(m, n, t - n) : -1;
         if (first == -1 && second == -1) return -1;
         return Math.max(first, second) + 1;
     }
 
-    public int solveConMemo(int m, int n, int t) {
+    public int hamburguesasMemo (int m, int n, int t) {
         if (t < 0) return -1;
         int[] memo = new int[t + 1];
         Arrays.fill(memo, -2);
-        return HamburguesasMemo(m, n, t, memo);
+        return solveConMemo(m, n, t, memo);
     }
 
-    public int HamburguesasMemo(int m, int n, int t, int[] memo) {
+    public int solveConMemo(int m, int n, int t, int[] memo) {
         if (memo[t] != -2) return memo[t];
         if (t == 0) {
             return memo[t] = 0;
         }
-        int first = (t >= m) ? HamburguesasMemo(m, n, t - m, memo) : -1;
-        int second = (t >= n) ? HamburguesasMemo(m, n, t - n, memo) : -1;
+        int first = (t >= m) ? solveConMemo(m, n, t - m, memo) : -1;
+        int second = (t >= n) ? solveConMemo(m, n, t - n, memo) : -1;
         if (first == -1 && second == -1) {
             return memo[t] = -1;
         } else {
@@ -31,7 +31,7 @@ public class Metodos {
         }
     }
 
-    public void HamburguesaDin(int m, int n, int t) {
+    public void hamburguesaDin(int m, int n, int t) {
         int[] dp = new int[t + 1];
         int first, second;
         dp[0] = 0;
