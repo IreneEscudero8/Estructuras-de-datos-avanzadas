@@ -1,9 +1,3 @@
-/**
- * PROYECTO ESTRUCTURA DE DATOS AVANZADAS
- * Equipo: Luis Fernando Reyes, Andre Gorostieta, Irene Escudero
- * Clase para probar los metodos y su buen funcionamiento
- */
-
 import java.util.Scanner;
 
 public class PruebaMetodos {
@@ -21,17 +15,30 @@ public class PruebaMetodos {
         System.out.print("Tiempo total disponible (t): ");
         int t = sc.nextInt();
 
-        System.out.println("\n=== RESULTADOS ===");
+        int repeticiones = 5; // número de veces que se repite cada método
+        System.out.println("\n=== PROMEDIO DE TIEMPOS DE EJECUCIÓN (en segundos) ===");
 
-        int[] rec = m.hamburguesasRec(m1, m2, t);
-        System.out.println("Recursivo: " + rec[0] + " hamburguesas, sobrante " + rec[1] + " min.");
+        double tiempoRec = medirPromedio(() -> m.hamburguesasRec(m1, m2, t), repeticiones);
+        double tiempoMemo = medirPromedio(() -> m.hamburguesasMemo(m1, m2, t), repeticiones);
+        double tiempoDin = medirPromedio(() -> m.hamburguesaDin(m1, m2, t), repeticiones);
 
-        int[] memo = m.hamburguesasMemo(m1, m2, t);
-        System.out.println("Memoización: " + memo[0] + " hamburguesas, sobrante " + memo[1] + " min.");
-
-        int[] din = m.hamburguesaDin(m1, m2, t);
-        System.out.println("Dinámico: " + din[0] + " hamburguesas, sobrante " + din[1] + " min.");
+        System.out.printf("Recursivo: %.8f s%n", tiempoRec);
+        System.out.printf("Memoización: %.8f s%n", tiempoMemo);
+        System.out.printf("Dinámico: %.8f s%n", tiempoDin);
 
         sc.close();
+    }
+
+    // Método para medir el promedio de tiempo de una función Runnable
+    private static double medirPromedio(Runnable funcion, int repeticiones) {
+        double total = 0;
+        for (int i = 0; i < repeticiones; i++) {
+            System.gc(); // limpia memoria entre pruebas
+            long inicio = System.nanoTime();
+            funcion.run();
+            long fin = System.nanoTime();
+            total += (fin - inicio) / 1_000_000_000.0;
+        }
+        return total / repeticiones;
     }
 }

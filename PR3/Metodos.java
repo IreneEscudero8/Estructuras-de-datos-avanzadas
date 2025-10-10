@@ -8,39 +8,42 @@ import java.util.Arrays;
 
 public class Metodos {
 
-    // Método recursivo
+    // Método recursivo (explora todas las ramas)
     public int[] hamburguesasRec(int m, int n, int t) {
-        // Caso base: tiempo exacto
         if (t == 0) return new int[]{0, 0};
-        // Caso base: tiempo negativo -> no válido
         if (t < 0) return new int[]{-1, t};
 
         int[] best = {-1, t}; // [maxHamburguesas, sobrante]
 
-        // Intentar hacer una hamburguesa de tipo m
+        // Opción 1: usar m
         if (t >= m) {
             int[] first = hamburguesasRec(m, n, t - m);
-            if (first[0] != -1 && first[1] == 0) {
-                first[0]++;
-                return first; // si ya es exacto, devolver
-            } else if (first[0] != -1 && first[1] < best[1]) {
-                best = new int[]{first[0] + 1, first[1]};
+            if (first[0] != -1) { // Si es válida
+                int sobrante = first[1];
+                int totalHamb = first[0] + 1;
+
+                // Si tiene menos sobrante, o mismo sobrante pero más hamburguesas
+                if (sobrante < best[1] || (sobrante == best[1] && totalHamb > best[0])) {
+                    best = new int[]{totalHamb, sobrante};
+                }
             }
         }
 
-        // Intentar hacer una hamburguesa de tipo n
+        // Opción 2: usar n
         if (t >= n) {
             int[] second = hamburguesasRec(m, n, t - n);
-            if (second[0] != -1 && second[1] == 0) {
-                second[0]++;
-                return second;
-            } else if (second[0] != -1 && second[1] < best[1]) {
-                best = new int[]{second[0] + 1, second[1]};
+            if (second[0] != -1) {
+                int sobrante = second[1];
+                int totalHamb = second[0] + 1;
+
+                if (sobrante < best[1] || (sobrante == best[1] && totalHamb > best[0])) {
+                    best = new int[]{totalHamb, sobrante};
+                }
             }
         }
 
-        // Si no hay combinación exacta, devolver el mejor intento
-        if (best[0] == -1) return new int[]{0, t}; // nada posible
+        // Si ninguna opción fue válida, devolver sobrante total
+        if (best[0] == -1) return new int[]{0, t};
         return best;
     }
 
