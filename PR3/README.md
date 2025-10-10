@@ -61,7 +61,7 @@ Por cada caso:
   → imprimir: `#hamburguesas m n sobrante`
 
 * Si el tiempo de ejecución excede 3 segundos:
-  → imprimir: `tiempo límite para resolver el problema excedido`
+  → imprimir: `tiempo límite excedido`
 
 ---
 
@@ -110,7 +110,7 @@ m = 4, n = 9, t = 10000
 ### Gráficas realizadas
 
 <img src="TiempoTotalPD.jpeg" alt="Gráfica de tiempo" width="400">  
-La gráfica muestra que el algoritmo **bottom-up** es el más eficiente y estable conforme aumenta el tamaño del problema. La **memoización** también presenta buenos tiempos, mientras que la versión **recursiva pura** deja de ser práctica para valores grandes de `t`.
+La gráfica muestra que el algoritmo **programación dinamica** es el más eficiente y estable conforme aumenta el tamaño del problema. La **memoización** también presenta buenos tiempos, mientras que la versión **recursiva** deja de ser práctica para valores grandes de `t`.
 
 ---
 
@@ -137,7 +137,5 @@ Este proyecto demuestra la importancia de elegir el enfoque algorítmico adecuad
 * **Memoización:** Buena eficiencia y fácil de implementar, con costo adicional en memoria.
 * **Programación Dinámica:** La solución más rápida y estable para `t` grandes.
 
-
-Además, se respetó la restricción de **hamburguesas enteras** y el **sobrante se interpreta como tiempo para bebidas gaseosas**, lo que agrega realismo al modelado del problema.
 
 ---
