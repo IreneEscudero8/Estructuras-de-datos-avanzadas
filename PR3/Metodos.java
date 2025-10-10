@@ -1,3 +1,9 @@
+/**
+ * PROYECTO ESTRUCTURA DE DATOS AVANZADAS
+ * Equipo: Luis Fernando Reyes, Andre Gorostieta, Irene Escudero
+ * Clase Metodos con los tres enfoques para resolver el problema
+ */
+
 import java.util.Arrays;
 
 public class Metodos {

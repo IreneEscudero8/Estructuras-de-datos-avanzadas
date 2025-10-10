@@ -1,3 +1,9 @@
+/**
+ * PROYECTO ESTRUCTURA DE DATOS AVANZADAS
+ * Equipo: Luis Fernando Reyes, Andre Gorostieta, Irene Escudero
+ * Clase para probar los metodos y su buen funcionamiento
+ */
+
 import java.util.Scanner;
 
 public class PruebaMetodos {
