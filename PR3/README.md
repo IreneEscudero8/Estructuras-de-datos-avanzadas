@@ -48,17 +48,17 @@ Homero puede comer hamburguesas de **dos tipos**: una tarda **m** minutos y la o
 
 ## Enfoques implementados
 
-### 1) Recursivo puro (backtracking)
+### 1) Recursivo (backtracking)
 
 Explora tomar `m` o `n` minutos hasta agotar tiempo. Es **didáctico** pero **exponencial** en el peor caso; útil sólo para tamaños pequeños.
 
-### 2) Recursivo con **memoización** (top‑down)
+### 2) Memoización
 
 Guarda `best(tiempo)` en una caché. Complejidad **O(t)** en tiempo y memoria; misma lógica que el recursivo, pero evitando recomputaciones. Soporta reconstrucción.
 
-### 3) **DP tabular** (bottom‑up)
+### 3) Programación dinamica
 
-Construye `dpExact[0..t]` con el máximo de hamburguesas exactas para cada `x ≤ t`. Al final elige el `x` con mejor `dpExact[x]` y **sobrante** `t−x` mínimo. Complejidad **O(t)** tiempo y **O(t)** memoria. Ideal para benchmarking.
+Construye `dpExact[x]` con el máximo de hamburguesas exactas para cada `x ≤ t`. Al final elige el `x` con mejor `dpExact[x]` y **sobrante** `t−x` mínimo. Complejidad **O(t)** tiempo y **O(t)** memoria. Ideal para benchmarking.
 
 **Criterio de desempate**: primero `h` máximo; a igualdad, `s` mínimo; opcionalmente, preferimos más hamburguesas del tipo de **menor tiempo**.
 
