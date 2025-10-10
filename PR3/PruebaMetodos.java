@@ -18,11 +18,11 @@ public class PruebaMetodos {
         int repeticiones = 5; // número de veces que se repite cada método
         System.out.println("\n=== PROMEDIO DE TIEMPOS DE EJECUCIÓN (en segundos) ===");
 
-        double tiempoRec = medirPromedio(() -> m.hamburguesasRec(m1, m2, t), repeticiones);
+        double tiempoRec = medirPromedio(() -> m.hamburguesasRec(m1, m2, t), repeticiones); //para probar 1,000 Y 10,000 se comento
         double tiempoMemo = medirPromedio(() -> m.hamburguesasMemo(m1, m2, t), repeticiones);
         double tiempoDin = medirPromedio(() -> m.hamburguesaDin(m1, m2, t), repeticiones);
 
-        System.out.printf("Recursivo: %.8f s%n", tiempoRec);
+        System.out.printf("Recursivo: %.8f s%n", tiempoRec);//para probar 1,000 Y 10,000 se comento
         System.out.printf("Memoización: %.8f s%n", tiempoMemo);
         System.out.printf("Dinámico: %.8f s%n", tiempoDin);
 
