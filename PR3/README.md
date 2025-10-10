@@ -68,7 +68,6 @@ Por cada caso:
 ## Estructura del Proyecto
 
 ```
-├── casos.txt                    # Archivo de entrada con los casos de prueba.
 ├── Metodos.java                 # Versión con recursividad, con memoización y con programación dinamica
 ├── PruebaMetodos.java         # Clase para realizar pruebas de rendimiento.
 ├── README.md                    # Documentación del proyecto.
