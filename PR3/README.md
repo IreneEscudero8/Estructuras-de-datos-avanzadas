@@ -9,25 +9,23 @@
 **Tiempo de trabajo individual:** 2–3 horas cada uno
 **Tiempo de trabajo total:** 6-9 horas
 
-Este proyecto es parte de la práctica de **Programación Dinámica** de la materia **Estructura de Datos**. El objetivo principal es comparar tres enfoques para resolver un problema clásico de optimización con tiempo limitado: **recursividad pura**, **recursividad con memoización (top‑down)** y **programación dinámica tabular (bottom‑up)**, midiendo su desempeño y analizando sus trade‑offs.
+Este proyecto es parte de la práctica de **Programación Dinámica** de la materia **Estructura de Datos**. El objetivo principal es comparar tres enfoques para resolver un problema clásico de optimización con tiempo limitado: **recursividad**, **recursividad con memoización** y **programación dinámica**, midiendo su desempeño y analizando sus trade‑offs.
 
 ---
 
 ## Objetivos
 
-* **Aplicar recursión, memoización y DP tabular** a un problema de maximización con restricción de tiempo.
-* **Comparar el desempeño** (tiempo, memoria, estabilidad) de los tres enfoques.
-* **Recuperar soluciones** (cuántas hamburguesas de cada tipo) y documentar criterios de desempate.
+* **Aplicar recursión, memoización y programación dinamica** a un problema de maximización con restricción de tiempo.
+* **Comparar el desempeño** Vamos a ver el desempeño de las estructuras en base al tiempo y ver la estructura más eficiente (muy probablemente programación dinamica).
 
 ---
 
 ## Descripción del problema
 
-Homero puede comer hamburguesas de **dos tipos**: una tarda **m** minutos y la otra **n** minutos. Dado un tiempo disponible **t**, se busca **maximizar el número total de hamburguesas** sin exceder **t**. Si no es posible usar todo el tiempo, se permite un **sobrante** (minutos sin usar). El criterio es **lexicográfico**:
+Homero puede comer hamburguesas de **dos tipos**: una tarda **m** minutos y la otra **n** minutos. Dado un tiempo disponible **t**, se busca **maximizar el número total de hamburguesas** sin exceder **t**. Si no es posible usar todo el tiempo, se permite un **sobrante** (las hamburguesas se tienen que comer completas):
 
-1. maximizar hamburguesas; 2) minimizar sobrante.
+1. maximizar hamburguesas, viendo cual conviene agarrar.
 
-Este problema es una variante de **coin change / knapsack sin límite** con pesos `m, n` y valor 1 por hamburguesa.
 
 ---
 
@@ -36,17 +34,15 @@ Este problema es una variante de **coin change / knapsack sin límite** con peso
 **Entrada:** enteros positivos `m, n, t`.
 **Salida:** una línea con:
 
-* `h` = máximo de hamburguesas,
-* `s` = sobrante mínimo (se omite si es 0).
-  Opcionalmente, también imprimimos la combinación `(x, y)` tomada.
+* `h` = máximo de hamburguesas
 
 **Ejemplos**
 
-|  m |  n |  t | Mejor (x,y) |  h |  s |
-| -: | -: | -: | :---------: | -: | -: |
-|  3 |  5 | 54 |    (18,0)   | 18 |  0 |
-|  3 |  5 | 56 |    (16,4)   | 20 |  0 |
-|  6 |  8 | 17 |    (1,1)    |  2 |  1 |
+|  m |  n |  t | Mejor (x,y) |  h |
+| -: | -: | -: | :---------: | -: |
+|  3 |  5 | 54 |    (18,0)   | 18 |
+|  3 |  5 | 56 |    (16,4)   | 20 |
+|  6 |  8 | 17 |    (1,1)    |  2 |
 
 ---
 
