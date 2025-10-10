@@ -103,23 +103,23 @@ m = 4, n = 9, t = 10000
 
 ### Tabla de resultados de las pruebas:
 
-<img src="TablaPD.jpeg" alt="Tabla de resultados" width="400">  
+<img src="PR3tabla.jpeg" alt="Tabla de resultados" width="400">  
 
 ---
 
 ### Gráficas realizadas
 
-<img src="TiempoTotalPD.jpeg" alt="Gráfica de tiempo" width="400">  
-La gráfica muestra que el algoritmo **programación dinamica** es el más eficiente y estable conforme aumenta el tamaño del problema. La **memoización** también presenta buenos tiempos, mientras que la versión **recursiva** deja de ser práctica para valores grandes de `t`.
+<img src="PR3Recursividad.jpeg" alt="Recursividad" width="400">  
+La gráfica muestra que el algoritmo **recursiva** es eficiente y estable con baja cantidad de tiempo, pero conforme aumenta el tamaño del problema ya no es la mejor opcion. Mientras más aumenta t más se tarda en resolver el problema, hasta que llega al limite que nosotros impusimos para que no se tarde tanto. Los costos van creciendo exponencialmente.
 
 ---
 
-<img src="TiempoSobrantePD.jpeg" alt="Comparación sobrante" width="400">  
-La gráfica refleja cómo las tres versiones logran soluciones equivalentes en términos de sobrante, pero difieren notablemente en rendimiento.
+<img src="PR3Memoisación.jpeg" alt="Memoisación" width="400">  
+La gráfica refleja como la memoización es un metodo optimizado
 
 ---
 
-<img src="TiempoHamburguesasPD.jpeg" alt="Comparación hamburguesas" width="400">  
+<img src="PR3ProgramaciónDinamica.jpeg" alt="Programación dinamica" width="400">  
 El número máximo de hamburguesas es igual entre métodos, pero el tiempo de cómputo crece exponencialmente en la versión recursiva.
 
 ---
