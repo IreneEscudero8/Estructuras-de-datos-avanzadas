@@ -137,6 +137,7 @@ Este proyecto demuestra la importancia de elegir el enfoque algorítmico adecuad
 * **Memoización:** Buena eficiencia y fácil de implementar, con costo adicional en memoria.
 * **Programación Dinámica:** La solución más rápida y estable para `t` grandes.
 
+
 Además, se respetó la restricción de **hamburguesas enteras** y el **sobrante se interpreta como tiempo para bebidas gaseosas**, lo que agrega realismo al modelado del problema.
 
 ---
