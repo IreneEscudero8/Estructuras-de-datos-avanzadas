@@ -124,7 +124,7 @@ Esta es la grafica de programación dinamica muestra como esta es más optima qu
 
 ---
 
-<img src="TiempoMemoriaPD.jpeg" alt="Comparación memoria" width="400">  
+<img src="PR3ComparaTiempo.png" alt="Comparación memoria" width="400">  
 Aqui podemos observar como la versión que más costo tiene es la de Recursividad, ya que desarrolla un arbol que en cantidades de tiempo grandes se vuelve muy impractico. En la de Memoización y programación dinamica se ve como sus costos no suben mucho, ya que son las optimas.Siendo la más optima la de programción dinamica.
 
 ---
