@@ -69,11 +69,8 @@ Por cada caso:
 
 ```
 ├── casos.txt                    # Archivo de entrada con los casos de prueba.
-├── HomeroRecursivo.java         # Versión recursiva sin memoización.
-├── HomeroMemo.java              # Versión con memoización.
-├── HomeroDP.java                # Versión bottom-up.
-├── CompareEstructuras.java      # Clase para obtener datos y comparar rendimiento.
-├── TestComparacion.java         # Clase para realizar pruebas de rendimiento.
+├── Metodos.java                 # Versión con recursividad, con memoización y con programación dinamica
+├── PruebaMetodos.java         # Clase para realizar pruebas de rendimiento.
 ├── README.md                    # Documentación del proyecto.
 ```
 
