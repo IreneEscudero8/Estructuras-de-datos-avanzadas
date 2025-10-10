@@ -78,7 +78,7 @@ Por cada caso:
 ## Cómo ejecutar
 
 1. Compilar todos los archivos.
-2. Ejecutar `TestComparacion`, cambiando el archivo `casos.txt` según el conjunto de pruebas deseado.
+2. Ejecutar `PruebaMetodos`, metiendo en la terminal los datos según el conjunto de pruebas deseado.
 
 ---
 
