@@ -110,22 +110,22 @@ m = 4, n = 9, t = 10000
 ### Gráficas realizadas
 
 <img src="PR3Recursividad.jpeg" alt="Recursividad" width="400">  
-La gráfica muestra que el algoritmo **recursiva** es eficiente y estable con baja cantidad de tiempo, pero conforme aumenta el tamaño del problema ya no es la mejor opcion. Mientras más aumenta t más se tarda en resolver el problema, hasta que llega al limite que nosotros impusimos para que no se tarde tanto. Los costos van creciendo exponencialmente.
+La gráfica muestra que el algoritmo **recursiva** es eficiente y estable con baja cantidad de tiempo, pero conforme aumenta el tamaño del problema ya no es la mejor opcion. Mientras más aumenta t más se tarda en resolver el problema, hasta que llega al limite que nosotros impusimos para que no se tarde tanto. Los costos algoritmicos van creciendo exponencialmente.
 
 ---
 
 <img src="PR3Memoisación.jpeg" alt="Memoisación" width="400">  
-La gráfica refleja como la memoización es un metodo optimizado
+La gráfica refleja como la memoización es un metodo optimizado de la recursividad, el crecimiento del costo algoritmico es lineal, por lo tanto no sube tanto. El tiempo t crece linealmente, es bueba solución pero todavia se puede optimizar.
 
 ---
 
 <img src="PR3ProgramaciónDinamica.jpeg" alt="Programación dinamica" width="400">  
-El número máximo de hamburguesas es igual entre métodos, pero el tiempo de cómputo crece exponencialmente en la versión recursiva.
+Esta es la grafica de programación dinamica muestra como esta es más optima que la memoización. Esta tiene costos lineales, pero con una constante más baja. Por esa razón los costos son menores que ne memoización. 
 
 ---
 
 <img src="TiempoMemoriaPD.jpeg" alt="Comparación memoria" width="400">  
-La versión recursiva usa menos memoria pero es lenta. La memoización y la programación dinámica requieren más memoria pero logran tiempos mucho mejores.
+Aqui podemos observar como la versión que más costo tiene es la de Recursividad, ya que desarrolla un arbol que en cantidades de tiempo grandes se vuelve muy impractico. En la de Memoización y programación dinamica se ve como sus costos no suben mucho, ya que son las optimas.Siendo la más optima la de programción dinamica.
 
 ---
 
