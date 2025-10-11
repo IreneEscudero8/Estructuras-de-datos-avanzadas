@@ -1,44 +1,65 @@
-import java.util.Scanner;
+import java.util.Arrays;
 
 public class PruebaMetodos {
 
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        Metodos m = new Metodos();
+        Metodos solucionador = new Metodos();
+        int m = 4;
+        int n = 9;
 
-        System.out.print("Tiempo de hamburguesa tipo 1 (m): ");
-        int m1 = sc.nextInt();
+        // --- Bloque 1: Pruebas de Correctitud de Resultados ---
+        System.out.println("### PRUEBAS DE CORRECTITUD ###");
+        int t = 100;
 
-        System.out.print("Tiempo de hamburguesa tipo 2 (n): ");
-        int m2 = sc.nextInt();
+        System.out.println("\nResolviendo para m=" + m + ", n=" + n + ", t=" + t);
+        System.out.println("Formato: [m's, n's, total, sobrante]");
+        
+        System.out.println("--- 1. Recursivo ---");
+        int[] resRec = solucionador.hamburguesasRec(m, n, t);
+        System.out.println("Resultado: " + Arrays.toString(resRec));
 
-        System.out.print("Tiempo total disponible (t): ");
-        int t = sc.nextInt();
+        System.out.println("\n--- 2. Memoización ---");
+        int[] resMemo = solucionador.hamburguesasMemo(m, n, t);
+        System.out.println("Resultado: " + Arrays.toString(resMemo));
 
-        int repeticiones = 5; // número de veces que se repite cada método
+        System.out.println("\n--- 3. Dinámico ---");
+        int[] resDin = solucionador.hamburguesaDin(m, n, t);
+        System.out.println("Resultado: " + Arrays.toString(resDin));
+
+        
+
+        // --- Bloque 2: Pruebas de Rendimiento ---
+        System.out.println("\n\n### PRUEBAS DE RENDIMIENTO ###");
+        // Se establece el valor de 't' para el cual se medirá el tiempo
+        int tParaMedir = 41;
+        System.out.println("Midiendo tiempos para m=" + m + ", n=" + n + ", t=" + tParaMedir);
+        
+        // Se crea una copia final de la variable para usarla en la expresión lambda
+        final int tFinal = tParaMedir;
+        int repeticiones = 5;
+
+        double tiempoRec = medirPromedio(() -> solucionador.hamburguesasRec(m, n, tFinal), repeticiones);
+        double tiempoMemo = medirPromedio(() -> solucionador.hamburguesasMemo(m, n, tFinal), repeticiones);
+        double tiempoDin = medirPromedio(() -> solucionador.hamburguesaDin(m, n, tFinal), repeticiones);
+
         System.out.println("\n=== PROMEDIO DE TIEMPOS DE EJECUCIÓN (en segundos) ===");
-
-        double tiempoRec = medirPromedio(() -> m.hamburguesasRec(m1, m2, t), repeticiones); //para probar 1,000 Y 10,000 se comento
-        double tiempoMemo = medirPromedio(() -> m.hamburguesasMemo(m1, m2, t), repeticiones);
-        double tiempoDin = medirPromedio(() -> m.hamburguesaDin(m1, m2, t), repeticiones);
-
-        System.out.printf("Recursivo: %.8f s%n", tiempoRec);//para probar 1,000 Y 10,000 se comento
+        System.out.printf("Recursivo:   %.8f s%n", tiempoRec);
         System.out.printf("Memoización: %.8f s%n", tiempoMemo);
-        System.out.printf("Dinámico: %.8f s%n", tiempoDin);
-
-        sc.close();
+        System.out.printf("Dinámico:    %.8f s%n", tiempoDin);
     }
 
-    // Método para medir el promedio de tiempo de una función Runnable
+    /**
+     * Mide el promedio de tiempo de ejecución de una función.
+     */
     private static double medirPromedio(Runnable funcion, int repeticiones) {
         double total = 0;
         for (int i = 0; i < repeticiones; i++) {
-            System.gc(); // limpia memoria entre pruebas
+            System.gc(); // Sugiere limpiar memoria entre pruebas
             long inicio = System.nanoTime();
             funcion.run();
             long fin = System.nanoTime();
-            total += (fin - inicio) / 1_000_000_000.0;
+            total += (fin - inicio);
         }
-        return total / repeticiones;
+        return (total / repeticiones) / 1_000_000_000.0;
     }
 }
