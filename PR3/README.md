@@ -6,8 +6,8 @@
 * Ricardo André Gorostieta Jurado
 * Irene Escudero Cazarez
 
-**Tiempo de trabajo individual:** 2-3 horas cada uno
-**Tiempo de trabajo total:** 6-9 horas
+**Tiempo de trabajo individual:** 3-4 horas cada uno
+**Tiempo de trabajo total:** 9-12 horas
 
 Este proyecto es parte de la práctica de **Memoización y Programación Dinámica** de la materia **Estructura de Datos**. El objetivo principal es desarrollar un programa que permita determinar cuántas hamburguesas Homero Simpson puede comer en un tiempo limitado, aplicando diferentes enfoques algorítmicos para encontrar la solución óptima.
 
@@ -68,9 +68,11 @@ Por cada caso:
 ## Estructura del Proyecto
 
 ```
-├── Metodos.java                 # Versión con recursividad, con memoización y con programación dinamica
+├── Metodos.java                 # Funciones:Versión con recursividad, con memoización y con programación dinamica
 ├── PruebaMetodos.java         # Clase para realizar pruebas de rendimiento.
+├── TestCompare.java           # Clase que compara tiempos de ejecución apartir de las entradas de un archivo, deteniendo a los 3 segundos de tiempo
 ├── README.md                    # Documentación del proyecto.
+├── archivo.txt                # Archivo de entrada
 ```
 
 ---
