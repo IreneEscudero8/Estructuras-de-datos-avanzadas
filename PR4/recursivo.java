@@ -1,4 +1,9 @@
-package PR4;
+//Para dos cadenas, s1 y s2 el costo es d=1 por cada hueco y a = 2 por cada pareja en M (cambiar una letra por otra) 
+
+/**
+ * PROYECTO ESTRUCTURA DE DATOS AVANZADAS
+ * Equipo: Luis Fernando Reyes, Andre Gorostieta, Irene Escudero
+ */
 
 public class recursivo {
     public int EditDistance(String s1, String s2) {
