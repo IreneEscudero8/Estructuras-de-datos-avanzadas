@@ -3,6 +3,7 @@ import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 
+
 /**
  * PROYECTO ESTRUCTURA DE DATOS AVANZADAS
  * Equipo: Luis Fernando Reyes, Andre Gorostieta, Irene Escudero
@@ -75,49 +76,62 @@ public class CalculaDistancia {
     }
 
     
-    public static String leer(String rutaArchivo) throws IOException {
-        return Files.readString(Paths.get(rutaArchivo), StandardCharsets.UTF_8);
-    }
+
 
     public static void main(String[] args) {
-        String archivo1 = "texto1.txt";
-        String archivo2 = "texto2.txt";
 
+       
+       
         int costoHueco = 1;     // delta
         int costoSustitucion = 2; // alfa
 
         try {
             
-            String texto1 = leer(archivo1);
-            String texto2 = leer(archivo2);
-
-            System.out.println("Archivo 1: " + archivo1 + " (" + texto1.length() + " caracteres)");
-            System.out.println("Archivo 2: " + archivo2 + " (" + texto2.length() + " caracteres)");
+            String texto1 = new String(Files.readAllBytes(Paths.get("texto1.txt")), StandardCharsets.UTF_8);
+            String texto2 = new String(Files.readAllBytes(Paths.get("texto2.txt")), StandardCharsets.UTF_8);
+            
+            System.out.println("Archivo 1: " + texto1.length() + " caracteres)");
+            System.out.println("Archivo 2: " + texto2.length() + " caracteres)");
             System.out.println("Costo Hueco (delta): " + costoHueco);
             System.out.println("Costo Sustitución (alfa): " + costoSustitucion);
 
             CalculaDistancia calculador = new CalculaDistancia(costoHueco, costoSustitucion);
             
-            long startTimeDP = System.currentTimeMillis(); 
-            int distanciaDP = calculador.editDistanceDP(texto1, texto2);
-            long endTimeDP = System.currentTimeMillis();
-            long tiempoDP = (endTimeDP - startTimeDP);
+            long startTimeDP1 = System.currentTimeMillis(); 
+            int distanciaDP1 = calculador.editDistanceDP(texto1, texto2);
+            long endTimeDP1 = System.currentTimeMillis();
+            long tiempoDP1 = (endTimeDP1 - startTimeDP1);
 
-            System.out.println("Cálculo DP completado en " + tiempoDP + " ms.");
-            System.out.println("La distancia con programacion dinamica es: " + distanciaDP);
+            System.out.println("Cálculo DP de A a B completado en " + tiempoDP1 + " ms.");
+            System.out.println("La distancia con programacion dinamica es: " + distanciaDP1);
             
-           
-            long startTimeRec = System.currentTimeMillis();
-            int distanciaRec = calculador.editDistanceRecursivo(texto1, texto2);
-            long endTimeRec = System.currentTimeMillis();
-            long tiempoRec = (endTimeRec - startTimeRec);
+            long startTimeDP2 = System.currentTimeMillis(); 
+            int distanciaDP2 = calculador.editDistanceDP(texto2, texto1);
+            long endTimeDP2 = System.currentTimeMillis();
+            long tiempoDP2 = (endTimeDP2 - startTimeDP2);
 
-            System.out.println("Cálculo Recursivo completado en " + tiempoRec + " ms.");
-            System.out.println("La distancia recursiva es: " + distanciaRec);
+            System.out.println("Cálculo DP de B a A completado en " + tiempoDP2 + " ms.");
+            System.out.println("La distancia con programacion dinamica es: " + distanciaDP2);
+
+            long startTimeRec1 = System.currentTimeMillis();
+            int distanciaRec1 = calculador.editDistanceRecursivo(texto1, texto2);
+            long endTimeRec1 = System.currentTimeMillis();
+            long tiempoRec1 = (endTimeRec1 - startTimeRec1);
+
+            System.out.println("Cálculo Recursivo de A a B completado en " + tiempoRec1 + " ms.");
+            System.out.println("La distancia recursiva es: " + distanciaRec1);
+
+            long startTimeRec2 = System.currentTimeMillis();
+            int distanciaRec2 = calculador.editDistanceRecursivo(texto2, texto1);
+            long endTimeRec2 = System.currentTimeMillis();
+            long tiempoRec2 = (endTimeRec2 - startTimeRec2);
+
+            System.out.println("Cálculo Recursivo de B a A completado en " + tiempoRec2 + " ms.");
+            System.out.println("La distancia recursiva es: " + distanciaRec2);
            
         } catch (IOException e) {
             System.err.println("Error al leer uno de los archivos: " + e.getMessage());
-            System.err.println("Asegúrate de que los archivos '" + archivo1 + "' y '" + archivo2 + "' existan.");
+            System.err.println("Asegúrate de que los archivos existan.");
         }
     }
 }
