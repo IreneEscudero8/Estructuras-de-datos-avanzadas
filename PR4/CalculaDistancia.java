@@ -41,6 +41,43 @@ public class CalculaDistancia {
         return Math.min(replaceCost, Math.min(insertCost, deleteCost));
     }
 
+    public int editDistanceMemoizado(String s1, String s2) {
+        int m = s1.length();
+        int n = s2.length();
+        int[][] memo = new int[m + 1][n + 1];
+        for (int i = 0; i <= m; i++) {
+            for (int j = 0; j <= n; j++) {
+                memo[i][j] = -1;
+            }
+        }
+        return editDistanceMemoHelper(s1, s2, m, n, memo);
+    }
+
+    private int editDistanceMemoHelper(String s1, String s2, int m, int n, int[][] memo) {
+        if (memo[m][n] != -1) {
+            return memo[m][n];
+        }
+        if (m == 0) {
+            memo[m][n] = n * delta;
+            return memo[m][n];
+        }
+        if (n == 0) {
+            memo[m][n] = m * delta;
+            return memo[m][n];
+        }
+        int result;
+        if (s1.charAt(m - 1) == s2.charAt(n - 1)) {
+            result = editDistanceMemoHelper(s1, s2, m - 1, n - 1, memo);
+        } else {
+            int insertCost = delta + editDistanceMemoHelper(s1, s2, m, n - 1, memo);
+            int deleteCost = delta + editDistanceMemoHelper(s1, s2, m - 1, n, memo);
+            int replaceCost = alfa + editDistanceMemoHelper(s1, s2, m - 1, n - 1, memo);
+            result = Math.min(replaceCost, Math.min(insertCost, deleteCost));
+        }
+        memo[m][n] = result;
+        return result;
+    }
+
     public int editDistanceDP(String s1, String s2) {
         int m = s1.length();
         int n = s2.length();
@@ -80,8 +117,6 @@ public class CalculaDistancia {
 
     public static void main(String[] args) {
 
-       
-       
         int costoHueco = 1;     // delta
         int costoSustitucion = 2; // alfa
 
