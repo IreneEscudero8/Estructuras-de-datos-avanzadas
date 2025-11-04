@@ -30,6 +30,17 @@ El proyecto consiste en implementar tres versiones del programa:
 
 ## Descripción del Problema
 
+El problema que resolvemos en esta práctica es ayudar a un profesor de bachillerato que sospecha que sus estudiantes están entregando tareas muy parecidas.
+
+Nuestro objetivo es **cuantificar numéricamente qué tan similares son** dos documentos de texto. El principal reto es el **desempeño**, ya que cada ensayo puede tener hasta 50,000 caracteres (entre 5,000 y 10,000 palabras). Necesitamos un algoritmo que pueda comparar archivos de ese tamaño sin tardar demasiado.
+
+Para hacerlo, implementamos un programa que calcula la **distancia de edición** (Levenshtein) entre dos textos. Esta distancia mide el "costo" mínimo para convertir un texto en otro usando tres operaciones básicas, con costos definidos:
+
+* **Insertar** un carácter: $\beta$
+* **Borrar** (eliminar) un carácter: $\beta$
+* **Reemplazar** un carácter por otro: $\alpha$
+
+Para esta práctica, los valores específicos que usamos fueron **$\alpha = 2$** y **$\beta = 1$**.
 
 ## Entrada
 
