@@ -44,9 +44,20 @@ Para esta práctica, los valores específicos que usamos fueron **$\alpha = 2$**
 
 ## Entrada
 
+El programa recibe como entrada los **nombres de dos archivos de texto**, `A` y `B`, que son los documentos que se van a comparar.
+
+* **Formato:** Los archivos deben ser de texto plano (`.txt`) codificados en **UTF-8**.
+* **Longitud Máxima:** Cada archivo puede tener una longitud máxima de **50,000 caracteres**.
 
 ## Salida
 
+Lo que debe imprimir el programa es una **sola línea de texto** con toda esta información:
+
+* El número de caracteres del documento `A` y del `B`.
+* La distancia de edición que calculó: `D(A, B)` y `D(B, A)`.
+* El tiempo que se tardó en hacer el cálculo de las distancias.
+
+**Especificación del tiempo:** Si el cálculo se tarda **más de 10 segundos**, el programa va a detenerse y mostrar el mensaje: `tiempo límite para resolver el problema excedido`.
 
 ## Estructura del Proyecto
 
