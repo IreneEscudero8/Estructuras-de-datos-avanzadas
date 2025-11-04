@@ -102,7 +102,7 @@ El objetivo de esta práctica era probar tres métodos diferentes para ver cuál
 
 * **Versión Recursiva Pura:** Esta fue nuestra base, pero enseguida vimos que no era práctica. Su rendimiento es muy bajo y se pasaba del límite de 10 segundos con textos súper cortos. Quedó claro que para este problema, **no es una opción viable**.
 
-**Versión con Memoización:** Aquí vimos una mejora gigantesca. Simplemente al guardar los resultados que ya habíamos calculado, el rendimiento se disparó y esta versión **sí fue capaz** de manejar los archivos grandes. Demostró ser una solución bastante buena, aunque las llamadas recursivas todavía le pesan un poco.
+* **Versión con Memoización:** Aquí vimos una mejora gigantesca. Simplemente al guardar los resultados que ya habíamos calculado, el rendimiento se disparó y esta versión **sí fue capaz** de manejar los archivos grandes. Demostró ser una solución bastante buena, aunque las llamadas recursivas todavía le pesan un poco.
 
 * **Versión con Programación Dinámica (Iterativa):** Esta fue, sin duda, la **ganadora indiscutible**. Al construir la solución de abajo hacia arriba, es mucho más directa y se quita de encima todo el trabajo extra de la recursión. Fue la **más rápida y eficiente**, y la única que de verdad aguantó los 50,000 caracteres sin despeinarse.
 
