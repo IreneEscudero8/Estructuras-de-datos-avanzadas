@@ -95,6 +95,22 @@ El objetivo era medir el tiempo de ejecución en cada caso para después poder g
 
 ## Gráficas e Interpretaciones
 
+<img src="P4Tabla.jpeg" alt="Recursividad" width="400">  
+
+
+<img src="P4Memoisacion.jpeg" alt="Recursividad" width="400">  
+
+
+
+<img src="PR4Recursividad.jpeg" alt="Recursividad" width="400">  
+
+
+<img src="PR4pDinamica.jpeg" alt="Recursividad" width="400">
+
+
+<img src="P4Comparacion.jpeg" alt="Recursividad" width="400">  
+
+
 
 ## Conclusión Final
 
