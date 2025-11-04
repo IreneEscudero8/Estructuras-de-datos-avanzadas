@@ -100,10 +100,10 @@ El objetivo era medir el tiempo de ejecución en cada caso para después poder g
 
 El objetivo de esta práctica era probar tres métodos diferentes para ver cuál era el más eficiente para resolver el problema. Y la verdad, la diferencia de rendimiento fue enorme.
 
-* **Versión Recursiva Pura:** Esta fue nuestra base, pero enseguida vimos que no era práctica. Su rendimiento es muy bajo y se pasaba del límite de 10 segundos con textos súper cortos. Quedó claro que para este problema, **no es una opción viable**.
+* **Versión Recursiva sin Memoización:** Esta fue nuestro primer codigo, pero enseguida vimos que no era práctica. Su rendimiento es muy bajo y se pasaba del límite de 10 segundos con textos muy cortos. Para este problema **no es una opción viable**.
 
-* **Versión con Memoización:** Aquí vimos una mejora gigantesca. Simplemente al guardar los resultados que ya habíamos calculado, el rendimiento se disparó y esta versión **sí fue capaz** de manejar los archivos grandes. Demostró ser una solución bastante buena, aunque las llamadas recursivas todavía le pesan un poco.
+* **Versión Recursiva con Memoización:** Aquí vimos una gran mejora. Simplemente al guardar los resultados que ya habíamos calculado, el rendimiento se crecio bastante y esta versión **fue capaz** de manejar los archivos medianos, pero con los grandes ya no pudo. Demostró ser una solución buena, aunque las llamadas recursivas todavía le pesa cuando ya son muchos datos.
 
-* **Versión con Programación Dinámica (Iterativa):** Esta fue, sin duda, la **ganadora indiscutible**. Al construir la solución de abajo hacia arriba, es mucho más directa y se quita de encima todo el trabajo extra de la recursión. Fue la **más rápida y eficiente**, y la única que de verdad aguantó los 50,000 caracteres sin despeinarse.
+* **Versión con Programación Dinámica:** Esta fue la **mejor opción**. Al construir la solución de abajo hasta arriba, es mucho más directa y se quita de encima todo el trabajo extra de la recursión. Fue la **más rápida y eficiente**, y la única que de verdad aguantó los 50,000 caracteres sin pasarse del limite de tiempo.
 
-Al final, nos quedó claro que elegir el método correcto no es un detalle menor, es lo que realmente hace la diferencia entre un programa que funciona y uno que no.
+La mejor opcion es la de porgramacion dinamica, ya que se salta los pasos de la recursión y evita resolver problemas que ya resolvio anteriormente. La versión momoizable sirve para archivos con pequeño texto y la recursiva sin momoización es muy ineficiente.
