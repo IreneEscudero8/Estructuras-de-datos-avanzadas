@@ -2,6 +2,13 @@ import java.io.IOException;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Paths;
+/*
+ * PROYECTO ESTRUCTURA DE DATOS AVANZADAS
+ * Equipo: Luis Fernando Reyes, Andre Gorostieta, Irene Escudero
+ * Clase que calcula las distancias de edición entre dos cadenas utilizando
+ * tres enfoques: recursivo, memoización y programación dinámica
+ * Lee dos archivos de texto y calcula las distancias entre ellos.
+ */
 
 public class CalculaDistancia {
 
@@ -111,7 +118,6 @@ public class CalculaDistancia {
         }
         return dp[m][n];
     }
-
     public static void main(String[] args) {
         
         // --- Cambiar aquí los nombres de los archivos para la prueba ---
@@ -179,7 +185,7 @@ public class CalculaDistancia {
             }
 
         } catch (IOException e) {
-            System.err.println("Error al leer uno de los archivos: " + e.getMessage());
+            System.err.println("Error al leer uno de los archivos:  " + e.getMessage());
         }
     }
 }
