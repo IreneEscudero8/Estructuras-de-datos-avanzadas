@@ -78,6 +78,17 @@ Así es como organizamos los archivos:
 
 ## Casos de Prueba
 
+Para poner a prueba cada versión y ver cómo se comportaba su rendimiento, corrimos los algoritmos con documentos de diferentes tamaños.
+
+Usamos textos con las siguientes longitudes de caracteres para nuestras pruebas:
+
+* **5** caracteres
+* **50** caracteres
+* **500** caracteres
+* **5,000** caracteres
+* **50,000** caracteres
+
+El objetivo era medir el tiempo de ejecución en cada caso para después poder graficar y comparar el desempeño de los tres métodos.
 
 
 ## Gráficas e Interpretaciones
