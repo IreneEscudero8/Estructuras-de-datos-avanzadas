@@ -74,6 +74,8 @@ Así es como organizamos los archivos:
 
 ## Cómo ejecutar
 
+1. Compilar todos los archivos.
+2. Ejecutar `Prueba`, metiendo en la terminal los nombres de los dos archivos de texto que quieres comparar.
 
 
 ## Casos de Prueba
