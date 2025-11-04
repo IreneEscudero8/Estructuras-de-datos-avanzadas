@@ -61,6 +61,15 @@ Lo que debe imprimir el programa es una **sola línea de texto** con toda esta i
 
 ## Estructura del Proyecto
 
+Así es como organizamos los archivos:
+
+├── CalculaDistancia.java    # Clase que calcula las distancias (versión recursiva y con memoización).
+├── dinamico.java            # Aquí está la implementación de la versión iterativa (Programación Dinámica).
+├── Graficas.java            # Clase para generar los datos de tiempo de ejecución para los tres métodos.
+├── Prueba.java              # Clase de prueba que usamos para verificar los diferentes métodos.
+├── texto1.txt               # Archivo de ejemplo para las pruebas.
+├── texto2.txt               # El segundo archivo para comparar.
+└── README.md                # La documentación del proyecto (este archivo).
 
 
 ## Cómo ejecutar
@@ -76,4 +85,12 @@ Lo que debe imprimir el programa es una **sola línea de texto** con toda esta i
 
 ## Conclusión Final
 
+El objetivo de esta práctica era probar tres métodos diferentes para ver cuál era el más eficiente para resolver el problema. Y la verdad, la diferencia de rendimiento fue enorme.
 
+* **Versión Recursiva Pura:** Esta fue nuestra base, pero enseguida vimos que no era práctica. Su rendimiento es muy bajo y se pasaba del límite de 10 segundos con textos súper cortos. Quedó claro que para este problema, **no es una opción viable**.
+
+**Versión con Memoización:** Aquí vimos una mejora gigantesca. Simplemente al guardar los resultados que ya habíamos calculado, el rendimiento se disparó y esta versión **sí fue capaz** de manejar los archivos grandes. Demostró ser una solución bastante buena, aunque las llamadas recursivas todavía le pesan un poco.
+
+* **Versión con Programación Dinámica (Iterativa):** Esta fue, sin duda, la **ganadora indiscutible**. Al construir la solución de abajo hacia arriba, es mucho más directa y se quita de encima todo el trabajo extra de la recursión. Fue la **más rápida y eficiente**, y la única que de verdad aguantó los 50,000 caracteres sin despeinarse.
+
+Al final, nos quedó claro que elegir el método correcto no es un detalle menor, es lo que realmente hace la diferencia entre un programa que funciona y uno que no.
