@@ -64,18 +64,24 @@ Lo que debe imprimir el programa es una **sola línea de texto** con toda esta i
 Así es como organizamos los archivos:
 
 ├── CalculaDistancia.java    # Clase que calcula las distancias (versión recursiva y con memoización).
+
 ├── dinamico.java            # Aquí está la implementación de la versión iterativa (Programación Dinámica).
+
 ├── Graficas.java            # Clase para generar los datos de tiempo de ejecución para los tres métodos.
+
 ├── Prueba.java              # Clase de prueba que usamos para verificar los diferentes métodos.
+
 ├── texto1.txt               # Archivo de ejemplo para las pruebas.
+
 ├── texto2.txt               # El segundo archivo para comparar.
+
 └── README.md                # La documentación del proyecto (este archivo).
 
 
 ## Cómo ejecutar
 
 1. Compilar todos los archivos.
-2. Ejecutar `Prueba`, sustituya los nombres de texto1.txt y texto2.txt por los nombres de los dos archivos de texto que quieres comparar.
+2. Ejecutar `Graficas`, sustituya los nombres de texto1.txt y texto2.txt por los nombres de los dos archivos de texto que quieres comparar.
 
 
 ## Casos de Prueba
@@ -97,23 +103,28 @@ El objetivo era medir el tiempo de ejecución en cada caso para después poder g
 Las graficas son las siguientes:
 
 Esta es la tabla que usamos para generar la graficas, en la cual ejecutamos el programa y le metimos los resultados de tiempo que nos dio el programa.
+
 <img src="P4Tabla.jpeg" alt="Practica4" width="400">  
 
 
 Esta es la grafica de recursividad en la cual vemos como supera el tiempo limite, solo una no supera el tiempo limite, lo cual nos indica que solo funciona con pocas palabras y ya despues se vuelve muy ineficiente.
+
 <img src="PR4Recursividad.jpeg" alt="Practica4" width="400">  
 
 
 
 Aqui acepta más texto pero aun asi sigue superando el limite con valores un poco más grandes. Baja el coste algoritmico ya que recordamos calculos previamente hechos para no repetir los calculos.
+
 <img src="P4Memoisacion.jpeg" alt="Practica4" width="400">  
 
 
 En la programacion dinamica es la mejor opcion, ya que soporta los textos más grandes. Como empezamos para construir toda la memoización sin tener que bajar por la recursividad, es más eficiente que el momoizable.
+
 <img src="PR4pDinamica.jpeg" alt="Practica4" width="400">
 
 
 Aqui podemos ver la comparación de las tres opciones de algoritmo, podemos ver que por mucho la mejor opcion es la de Programación Dinamica, le sigue la Memoizable que no es tan buena opcion y por ultimo la recursiva sin memoizable que es una opcion muy mala porque su costo algoritmico es muy alto.
+
 <img src="P4Comparacion.jpeg" alt="Practica4" width="400">  
 
 
