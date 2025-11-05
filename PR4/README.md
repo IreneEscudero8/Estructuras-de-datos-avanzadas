@@ -109,7 +109,7 @@ Esta es la tabla que usamos para generar la graficas, en la cual ejecutamos el p
 
 Esta es la grafica de recursividad en la cual vemos como supera el tiempo limite, solo una no supera el tiempo limite, lo cual nos indica que solo funciona con pocas palabras y ya despues se vuelve muy ineficiente.
 
-<img src="PR4Recursividad.jpeg" alt="Practica4" width="400">  
+<img src="P4Recursividad.jpeg" alt="Practica4" width="400">  
 
 
 
@@ -120,7 +120,7 @@ Aqui acepta más texto pero aun asi sigue superando el limite con valores un poc
 
 En la programacion dinamica es la mejor opcion, ya que soporta los textos más grandes. Como empezamos para construir toda la memoización sin tener que bajar por la recursividad, es más eficiente que el momoizable.
 
-<img src="PR4pDinamica.jpeg" alt="Practica4" width="400">
+<img src="P4pDinamica.jpeg" alt="Practica4" width="400">
 
 
 Aqui podemos ver la comparación de las tres opciones de algoritmo, podemos ver que por mucho la mejor opcion es la de Programación Dinamica, le sigue la Memoizable que no es tan buena opcion y por ultimo la recursiva sin memoizable que es una opcion muy mala porque su costo algoritmico es muy alto.
