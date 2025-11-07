@@ -28,7 +28,7 @@ HuffmanEncodeOne(x)
         m = m + 1
 
 
-HuffmanDecode(B[1..M])
+HuffmanDecode(B[1..m])
     k = 1
     v = 2n - 1 //raiz
     for i = 1 to M
