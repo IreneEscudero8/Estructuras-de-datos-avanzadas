@@ -1,0 +1,42 @@
+BuildHuffman(f[1..n])  //Construir el arbol
+    for i = 1 to n
+        L[i] = 0; R[i] = 0
+        Insert(i,f[i])
+    for i = n to 2n-1
+        x = ExtractMin() //Encuentra los dos
+        y = ExtractMin() //simbolos menos frecuentes
+        f[i] = f[x] + f[y]
+        Insert(i,f[i])
+        L[i] = x; P[x] = i
+        R[i] = y; P[y] = i 
+    P[2-1] = 0
+
+
+HuffmanEncode(A[1..K])
+    m = 1
+    for i = 1 to KA
+        HuffmanEncodeOne([i])
+
+
+HuffmanEncodeOne(x)
+    if x < 2n-1
+        HuffmanEncodeOne(P[x])
+        if x = L[P[x]]
+            B[m] = 0
+        else
+            B[m] = 1
+        m = m + 1
+
+
+HuffmanDecode(B[1..M])
+    k = 1
+    v = 2n - 1 //raiz
+    for i = 1 to M
+        if B[i] = 0
+            v = L[v]
+        else
+            v = R[v]
+    if L[v] = 0 
+        A[k] = v
+        k = k + 1
+        v = 2n - 1
