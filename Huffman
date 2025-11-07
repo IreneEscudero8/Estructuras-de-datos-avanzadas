@@ -2,14 +2,14 @@ BuildHuffman(f[1..n])  //Construir el arbol
     for i = 1 to n
         L[i] = 0; R[i] = 0
         Insert(i,f[i])
-    for i = n+1 to 2n-1
+    for i = n to 2n-1
         x = ExtractMin() //Encuentra los dos
         y = ExtractMin() //simbolos menos frecuentes
         f[i] = f[x] + f[y]
         Insert(i,f[i])
         L[i] = x; P[x] = i
         R[i] = y; P[y] = i 
-    P[2n-1] = 0
+    P[2-1] = 0
 
 
 HuffmanEncode(A[1..K])
@@ -28,15 +28,18 @@ HuffmanEncodeOne(x)
         m = m + 1
 
 
-HuffmanDecode(B[1..m])
-    k = 1
-    v = 2n - 1 //raiz
-    for i = 1 to M
-        if B[i] = 0
-            v = L[v]
-        else
-            v = R[v]
-    if L[v] = 0 
-        A[k] = v
-        k = k + 1
-        v = 2n - 1
+HuffmanDecode(B[1..M]) // B es el array de bits, de longitud M
+    k = 1                // 'k' es el índice para nuestro texto decodificado 'A'
+    v = 2n - 1           // 'v' es nuestro nodo actual, empezamos en la raíz
+
+    for i = 1 to M       // Recorremos cada bit del mensaje comprimido
+        if B[i] = 0        // Si el bit es 0...
+            v = L[v]       // ...nos movemos al hijo izquierdo.
+        else               // Si el bit es 1...
+            v = R[v]       // ...nos movemos al hijo derecho.
+
+        // Después de cada movimiento, revisamos si llegamos a una hoja:
+        if L[v] = 0        // Una hoja no tiene hijo izquierdo (L[v]=0)
+            A[k] = v       // ¡Encontramos un caracter! 'v' es su ID. Lo guardamos.
+            k = k + 1      // Avanzamos el índice del texto de salida.
+            v = 2n - 1     // ¡MUY IMPORTANTE! Regresamos a la raíz para el siguiente caracter.
