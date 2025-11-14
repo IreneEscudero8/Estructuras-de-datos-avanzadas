@@ -61,15 +61,15 @@ public class Huffman {
         P[2 * n - 1] = 0; // La raíz (el último nodo creado) no tiene padre
     }
 
-    public void printCodes() {
+    public void getCode() {
         System.out.println("--- Códigos Huffman ---");
         for (int i = 1; i <= n; i++) {
             // Imprime el símbolo (1 a n) y su código binario
-            System.out.println("Símbolo " + i + " (f=" + f[i] + "): " + getCode(i));
+            System.out.println("Símbolo " + i + " (f=" + f[i] + "): " + getCodeHelper(i));
         }
     }
 
-    public String getCode(int i) {
+    public String getCodeHelper(int i) {
         if (i < 1 || i > n) {
             return "Símbolo inválido";
         }
@@ -93,7 +93,6 @@ public class Huffman {
     }
 
     public void decode(String code) {
-        System.out.println("\n--- Decodificando: " + code + " ---");
         int root = 2 * n - 1; // El índice de la raíz
         int current = root;
         
@@ -136,7 +135,7 @@ public class Huffman {
 
         Huffman huffmanTree = new Huffman(frequencies);
         
-        huffmanTree.printCodes();
+        huffmanTree.getCode();
         
         // Ejemplo de código: "0" (A) + "101" (C) + "100" (B) = "0101100"
         huffmanTree.decode("01011001110"); // A, C, B, F, A
