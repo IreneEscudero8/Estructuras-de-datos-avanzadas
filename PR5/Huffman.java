@@ -92,7 +92,6 @@ public class Huffman {
     }
 
     public void decode(String code) {
-        System.out.println("\n--- Decodificando: " + code + " ---");
         int root = 2 * n - 1; // El índice de la raíz
         int current = root;
         
