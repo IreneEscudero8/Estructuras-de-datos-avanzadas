@@ -1,6 +1,7 @@
 import java.util.Comparator;
 import java.util.PriorityQueue; // Necesario para el comparador de la cola
 
+
 public class Huffman {
 
     
