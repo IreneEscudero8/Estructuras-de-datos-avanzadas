@@ -11,7 +11,6 @@ public class Prueba {
         
     public static void main(String[] args) throws Exception {
 
-        // Cambiado: ahora sí lee archivo.txt
         BufferedReader br = new BufferedReader(new FileReader("archivo.txt"));
 
         // Leer entradas
@@ -24,16 +23,20 @@ public class Prueba {
         int[] freq = new int[n];
 
         for (int i = 0; i < n; i++) {
-            symbols[i] = symbolsStr[i].charAt(0);
+            if (symbolsStr[i].equals("_")) {
+                symbols[i] = ' ';   // espacios
+            } else {
+                symbols[i] = symbolsStr[i].charAt(0);
+            }
             freq[i] = Integer.parseInt(freqStr[i]);
         }
 
-        // Construcción del árbol (tiempo)
+        // Construccion del arbol
         long t1 = System.nanoTime();
         Huffman2 h = new Huffman2(symbols, freq);
         long t2 = System.nanoTime();
 
-        // Codificación (tiempo)
+        // Codificacion 
         long t3 = System.nanoTime();
         StringBuilder encoded = new StringBuilder();
         for (char c : text.toCharArray()) {
@@ -41,23 +44,26 @@ public class Prueba {
         }
         long t4 = System.nanoTime();
 
-        // Decodificación
-        System.out.println(encoded.toString());
-        h.decode(encoded.toString());
+        // Decodificacion
+        StringBuilder decoded = new StringBuilder();
+        decoded.append(h.decode(encoded.toString()));
 
         // Resultados
         System.out.println("Alfabeto:");
         for (char c : symbols) System.out.print(c + " ");
-        System.out.println("\nCódigos Huffman:");
+        System.out.println("\nCodigos Huffman:");
         h.printCodes();
 
-        System.out.println("Tamaño original: " + text.length());
+        System.out.println("Tamanho original: " + text.length());
         System.out.println("Bits codificados: " + encoded.length());
         System.out.println("Bits UTF-8: " + (text.length() * 8));
-        System.out.println("Tiempo árbol (ns): " + (t2 - t1));
-        System.out.println("Tiempo codificación (ns): " + (t4 - t3));
+        System.out.println("Tiempo arbol (ns): " + (t2 - t1));
+        System.out.println("Tiempo codificacion (ns): " + (t4 - t3));
 
         System.out.println("Texto codificado:");
         System.out.println(encoded.toString());
+
+        System.out.println("Texto decodificado:");
+        System.out.println(decoded.toString());
     }
 }

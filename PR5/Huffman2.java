@@ -4,19 +4,19 @@ import java.util.PriorityQueue;
 /*
  * PROYECTO ESTRUCTURA DE DATOS AVANZADAS
  * Equipo: Luis Fernando Reyes, Andre Gorostieta, Irene Escudero
- * Clase que define los metiodos para construir un árbol de Huffman,
+ * Clase que define los metodos para construir un arbol de Huffman,
  * codificar y decodificar textos usando los códigos generados.
  */
 
 public class Huffman2 {
 
-    private int n; // Número de símbolos
+    private int n; // Numero de simbolos
     private PriorityQueue<Integer> pq;
     private int[] L; // Hijos izquierdos
     private int[] R; // Hijos derechos
     private int[] P; // Padres
     private int[] f; // Frecuencias
-    private char[] charMap; // Mapea los índices de las hojas (1 a n) a los caracteres reales
+    private char[] charMap; // Mapea los indices de las hojas (1 a n) a los caracteres reales
 
     public Huffman2(char[] letters, int[] frequencies) {
         if (letters.length != frequencies.length) {
@@ -76,7 +76,7 @@ public class Huffman2 {
                 return getCodeByIndex(i); 
             }
         }
-        return " ";
+        return "";
     }
 
     private String getCodeByIndex(int i) {
@@ -100,55 +100,54 @@ public class Huffman2 {
     }
 
  
-// Reemplaza el método decode actual por este
-public String decode(String code) {
-    StringBuilder decoded = new StringBuilder();
-    int root = 2 * n - 1;   // raíz según tu esquema de índices
-    int current = root;
 
-    for (int i = 0; i < code.length(); i++) {
-        char bit = code.charAt(i);
+    public String decode(String code) {
+        StringBuilder decoded = new StringBuilder();
+        int root = 2 * n - 1;   
+        int current = root;
 
-        if (bit == '0') {
-            current = L[current];
-        } else if (bit == '1') {
-            current = R[current];
-        } else {
-            // bit inválido: inserta espacio y reinicia
-            decoded.append(' ');
-            current = root;
-            continue;
-        }
+        for (int i = 0; i < code.length(); i++) {
+            char bit = code.charAt(i);
 
-        // si nos salimos del árbol o el hijo es 0 -> inserta espacio y reinicia
-        if (current <= 0 || current >= L.length) {
-            decoded.append(' ');
-            current = root;
-            continue;
-        }
-
-        // si es hoja (no tiene hijos) -> tomar símbolo
-        if (L[current] == 0 && R[current] == 0) {
-            // Si la hoja no tiene mapeo válido, poner espacio
-            char sym = (current >= 1 && current <= n) ? charMap[current] : '\0';
-            if (sym == '\0') {
-                decoded.append(' ');
+            if (bit == '0') {
+                current = L[current];
+            } else if (bit == '1') {
+                current = R[current];
             } else {
-                decoded.append(sym);
+                // bit invalido: inserta espacio y reinicia
+                decoded.append(' ');
+                current = root;
+                continue;
             }
-            current = root; // volver a raíz para el siguiente símbolo
+
+            // si nos salimos del arbol o el hijo es 0: inserta espacio y reinicia
+            if (current <= 0 || current >= L.length) {
+                decoded.append(' ');
+                current = root;
+                continue;
+            }
+
+            // si es hoja: tomar simbolo
+            if (L[current] == 0 && R[current] == 0) {
+                // Si la hoja no tiene mapeo valido: poner espacio
+                char sym = (current >= 1 && current <= n) ? charMap[current] : '\0';
+                if (sym == '\0') {
+                    decoded.append(' ');
+                } else {
+                    decoded.append(sym);
+                }
+                current = root; // volver a raiz para el siguiente simbolo
+            }
         }
-    }
 
-    // Si al final no volvimos a la raíz, puede ser código incompleto: agregar espacio
-    if (current != root) {
-        decoded.append(' ');
-    }
+        // Si al final no volvimos a la raiz, puede ser codigo incompleto: agregar espacio
+        if (current != root) {
+            decoded.append(' ');
+        }
 
-    String result = decoded.toString();
-    System.out.println("Resultado: " + result);
-    return result;
-}
+        String result = decoded.toString();
+        return result;
+    }
 
     public static void main(String[] args) {
         char[] letters = {'A', 'B', 'C', 'D', 'E', 'F'};
