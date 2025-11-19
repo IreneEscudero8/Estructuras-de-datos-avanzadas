@@ -1,20 +1,26 @@
 import java.util.Comparator;
 import java.util.PriorityQueue;
 
+/*
+ * PROYECTO ESTRUCTURA DE DATOS AVANZADAS
+ * Equipo: Luis Fernando Reyes, Andre Gorostieta, Irene Escudero
+ * Clase que define los metodos para construir un arbol de Huffman,
+ * codificar y decodificar textos usando los códigos generados.
+ */
 
 public class Huffman2 {
 
-    private int n; // Número de símbolos
+    private int n; // Numero de simbolos
     private PriorityQueue<Integer> pq;
     private int[] L; // Hijos izquierdos
     private int[] R; // Hijos derechos
     private int[] P; // Padres
     private int[] f; // Frecuencias
-    private char[] charMap; // Mapea los índices de las hojas (1 a n) a los caracteres reales
+    private char[] charMap; // Mapea los indices de las hojas (1 a n) a los caracteres reales
 
     public Huffman2(char[] letters, int[] frequencies) {
         if (letters.length != frequencies.length) {
-            throw new IllegalArgumentException("Los arrays de letras y frecuencias deben tener el mismo tamaño.");
+            throw new IllegalArgumentException("Los arrays de letras y frecuencias deben tener el mismo tamanho.");
         }
         
         this.n = frequencies.length;
@@ -58,9 +64,9 @@ public class Huffman2 {
     }
 
     public void printCodes() {
-        System.out.println("--- Códigos Huffman ---");
+        System.out.println("--- Codigos Huffman ---");
         for (int i = 1; i <= n; i++) {
-            System.out.println("Símbolo '" + charMap[i] + "' (f=" + f[i] + "): " + getCodeByIndex(i));
+            System.out.println("Simbolo '" + charMap[i] + "' (f=" + f[i] + "): " + getCodeByIndex(i));
         }
     }
 
@@ -70,12 +76,12 @@ public class Huffman2 {
                 return getCodeByIndex(i); 
             }
         }
-        return "Símbolo no encontrado";
+        return "";
     }
 
     private String getCodeByIndex(int i) {
         if (i < 1 || i > n) {
-            return "Índice inválido";
+            return "Indice invalido";
         }
         
         StringBuilder code = new StringBuilder();
@@ -94,35 +100,54 @@ public class Huffman2 {
     }
 
  
-    public void decode(String code) {
-        System.out.println("\n--- Decodificando: " + code + " ---");
-        int root = 2 * n - 1;
-        int current = root;
-        
-        StringBuilder decodedOutput = new StringBuilder();
 
-        for (char bit : code.toCharArray()) {
+    public String decode(String code) {
+        StringBuilder decoded = new StringBuilder();
+        int root = 2 * n - 1;   
+        int current = root;
+
+        for (int i = 0; i < code.length(); i++) {
+            char bit = code.charAt(i);
+
             if (bit == '0') {
                 current = L[current];
             } else if (bit == '1') {
                 current = R[current];
             } else {
+                // bit invalido: inserta espacio y reinicia
+                decoded.append(' ');
+                current = root;
                 continue;
             }
 
+            // si nos salimos del arbol o el hijo es 0: inserta espacio y reinicia
+            if (current <= 0 || current >= L.length) {
+                decoded.append(' ');
+                current = root;
+                continue;
+            }
+
+            // si es hoja: tomar simbolo
             if (L[current] == 0 && R[current] == 0) {
-                decodedOutput.append(charMap[current]);
-                current = root; 
+                // Si la hoja no tiene mapeo valido: poner espacio
+                char sym = (current >= 1 && current <= n) ? charMap[current] : '\0';
+                if (sym == '\0') {
+                    decoded.append(' ');
+                } else {
+                    decoded.append(sym);
+                }
+                current = root; // volver a raiz para el siguiente simbolo
             }
         }
-        
-        if (current != root) {
-            System.out.println("Error: El código está incompleto o es inválido.");
-        } else {
-            System.out.println("Resultado: " + decodedOutput.toString());
-        }
-    }
 
+        // Si al final no volvimos a la raiz, puede ser codigo incompleto: agregar espacio
+        if (current != root) {
+            decoded.append(' ');
+        }
+
+        String result = decoded.toString();
+        return result;
+    }
 
     public static void main(String[] args) {
         char[] letters = {'A', 'B', 'C', 'D', 'E', 'F'};
@@ -135,7 +160,7 @@ public class Huffman2 {
         huffmanTree.printCodes();
 
         // 3. Probar la codificación de un solo carácter
-        System.out.println("Código para 'B': " + huffmanTree.getCode('B'));
+        System.out.println("Codigo para 'B': " + huffmanTree.getCode('B'));
         
         // 4. Probar la decodificación
         // Prueba con el código anterior que dio "ABC DA"
