@@ -79,6 +79,22 @@ Usamos textos con las siguientes longitudes de caracteres para nuestras pruebas,
 El objetivo era medir el tiempo de ejecución y la cantidad de bits generados en cada caso para después poder graficar y comparar el desempeño de la compresión de Huffman contra el formato UTF-8.
 
 
+## Gráficas e Interpretaciones
+Las gráficas son las siguientes:
+
+Esta es la tabla que usamos para generar las gráficas, en la cual ejecutamos el programa con los diferentes casos de prueba y registramos los bits resultantes y los tiempos de ejecución.
+
+<img src="P5Tabla.jpeg" alt="Tabla de Resultados Practica 5" width="400">
+
+
+Esta gráfica compara la eficiencia de almacenamiento. Podemos ver la diferencia entre el número de bits que ocupa el texto codificado con Huffman (azul) frente a lo que ocuparía en UTF-8 (naranja). Se observa claramente que Huffman reduce significativamente el tamaño del archivo, especialmente en textos más largos, cumpliendo el objetivo de compresión.
+
+<img src="P5ComparacionBits.jpeg" alt="Comparación Bits Huffman vs UTF-8" width="400">
+
+
+Aquí mostramos el tiempo de ejecución total (Cálculo del Árbol + Codificación) en función del número de caracteres. La gráfica muestra un comportamiento lineal ($O(M)$), lo cual coincide con el análisis teórico: mientras que construir el árbol toma un tiempo despreciable ($O(N \log N)$ dependiendo del alfabeto), recorrer el texto para codificarlo toma un tiempo proporcional a su longitud ($M$).
+
+<img src="P5Tiempos.jpeg" alt="Tiempo de Ejecución" width="400">
 
 
 ## Conclusión Final
