@@ -73,10 +73,7 @@ Para poner a prueba los algoritmos y ver cómo se comportaba su rendimiento y ca
 
 Usamos textos con las siguientes longitudes de caracteres para nuestras pruebas, respetando el límite de la práctica:
 
-* **5** caracteres
-* **50** caracteres
-* **500** caracteres
-* **2,500** caracteres
+
 * **5,000** caracteres
 
 El objetivo era medir el tiempo de ejecución y la cantidad de bits generados en cada caso para después poder graficar y comparar el desempeño de la compresión de Huffman contra el formato UTF-8.
