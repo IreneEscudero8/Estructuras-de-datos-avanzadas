@@ -57,8 +57,9 @@ Lo que debe imprimir el programa es una secuencia de texto que indique la siguie
 
 ├── Huffman.java      # Clase  que implementa el **algoritmo de Huffman** (nos sirvio para la clase 2).
 ├── Huffman           # Pseudocodigo del algoritmo de Huffman
-├── Huffman2.java     # Clase principal, con `main` para la **ejecución, lectura del archivo de entrada** y la impresión de la salida solicitada (tiempos y estadísticas).
+├── Huffman2.java     # Clase que define los metodos para construir un arbol de Huffman, codificar y decodificar textos usando los códigos generados.
 ├── archivo.txt       # Archivo txt de entrada, contiene alfabeto, frecuencias y texto acodificar.
+├── Prueba.java       # Clase en la que probamos el arbol de Huffman
 └── README.md         # Documentación del proyecto (este archivo).
 
 ## Cómo ejecutar
