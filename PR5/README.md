@@ -2,9 +2,9 @@
 
 **Equipo:**
 
-* Luis Fernando Reyes Altamirano [Revisar/Confirmar nombres]
-* Ricardo André Gorostieta Jurado [Revisar/Confirmar nombres]
-* Irene Escudero Cazarez [Revisar/Confirmar nombres]
+* Luis Fernando Reyes Altamirano
+* Ricardo André Gorostieta Jurado
+* Irene Escudero Cazarez
 
 **Tiempo de trabajo individual:** 2-3 horas
 **Tiempo de trabajo total:** 6-9 horas
@@ -13,28 +13,28 @@ El **Práctica 5: Algoritmos Codiciosos** de la materia **Estructura de Datos**.
 
 ---
 
-## 🎯 Objetivos
+## Objetivos
 
 * Aplicar algoritmos codiciosos en un problema práctico.
 * Comparar el desempeño de algoritmos alternativos para el mismo problema.
 
 ---
 
-## 📖 Descripción del Problema
+## Descripción del Problema
 
-Se te encargó desarrollar un algoritmo para **comprimir textos alfanuméricos de hasta 5000 caracteres**. El objetivo es guardarlos en un campo de una base de datos y poder recuperarlos de forma simple y eficiente.
+Desarrollar un algoritmo para comprimir textos alfanuméricos de hasta 5000 caracteres. El objetivo es guardarlos en un campo de una base de datos y poder recuperarlos de forma simple y eficiente.
 
 Para cumplir con este propósito, se decidió implementar el **algoritmo de Huffman**, el cual genera un código conocido por su alta eficiencia en la compresión.
 
 El proyecto requiere la implementación de tres algoritmos fundamentales:
 
-* Algoritmo codicioso para producir el código de Huffman.
+* Algoritmo greedy para producir el código de Huffman.
 * Algoritmo para codificar el texto de entrada.
 * Algoritmo para decodificar un texto codificado.
 
-## 📥 Entrada del Programa
+## Entrada del Programa
 
-El programa recibe la información desde un **archivo de texto de entrada** que debe contener exactamente tres líneas, siguiendo este formato:
+El programa recibe la información desde un archivo de texto de entrada que debe contener exactamente tres líneas, siguiendo este formato:
 
 * **El Alfabeto.** Contiene una lista de los **símbolos alfanuméricos** que conforman el alfabeto, separados por espacios en blanco.
 * **Frecuencias.** Una lista de **números** (enteros) que indican la frecuencia de aparición de cada símbolo, siguiendo el mismo orden de la línea anterior.
@@ -42,7 +42,7 @@ El programa recibe la información desde un **archivo de texto de entrada** que 
 
 ---
 
-## 📤 Salida del Programa
+## Salida del Programa
 
 Lo que debe imprimir el programa es una secuencia de texto que indique la siguiente información, línea por línea:
 
@@ -53,7 +53,7 @@ Lo que debe imprimir el programa es una secuencia de texto que indique la siguie
 * **El texto codificado** (la secuencia de 1s y 0s).
 * **El texto decodificado** (para verificar que coincide con el original).
 
-## 📂 Estructura del Proyecto
+## Estructura del Proyecto
 
 ├── Huffman.java      # Clase  que implementa el **algoritmo de Huffman** (nos sirvio para la clase 2).
 ├── Huffman           # Pseudocodigo del algoritmo de Huffman
